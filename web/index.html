@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>普洱茶直播工作台</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <h1><span class="dot"></span>直播工作台</h1>
+      <p>普洱茶 · 内容与转化</p>
+    </div>
+    <nav class="nav" id="nav"></nav>
+    <div class="sidebar-foot" id="sidebarFoot">
+      <div><b>状态</b> <span id="healthText">检测中…</span></div>
+      <div id="healthDetail"></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <h2 id="pageTitle">今日情报</h2>
+      <span class="sub" id="pageSub"></span>
+      <span class="spacer"></span>
+      <span id="topActions"></span>
+    </div>
+    <div class="content" id="view"></div>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- 提词器全屏浮层 -->
+<div class="prompter" id="prompter">
+  <div class="prompter-bar">
+    <span class="t" id="prompterTitle">提词器</span>
+    <span class="spacer"></span>
+    <label>字号 <input type="range" id="pmFont" min="20" max="72" value="36"></label>
+    <label>速度 <input type="range" id="pmSpeed" min="2" max="60" value="12"></label>
+    <label><input type="checkbox" id="pmMirror"> 镜像</label>
+    <label><input type="checkbox" id="pmCue" checked> 显示动作提示</label>
+    <button class="btn sm" id="pmPlay">▶ 开始滚动</button>
+    <button class="btn sm" id="pmTop">回到开头</button>
+    <button class="btn sm" id="pmClose">退出 (Esc)</button>
+  </div>
+  <div class="prompter-body" id="prompterBody"></div>
+  <div class="prompter-foot" id="prompterFoot">
+    <span>空格：播放 / 暂停</span>
+    <span>↑ ↓：调速</span>
+    <span>← →：上一段 / 下一段</span>
+    <span>M：镜像</span>
+    <span>Esc：退出</span>
+  </div>
+</div>
+
+<script src="slides.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

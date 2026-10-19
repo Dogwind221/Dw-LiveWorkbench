@@ -1,0 +1,3325 @@
+{
+  "generatedAt": "2026-10-16T11:33:45.066Z",
+  "total": 552,
+  "byType": {
+    "region": 4,
+    "mountain": 221,
+    "product": 190,
+    "topic": 12,
+    "compliance": 125
+  },
+  "chunks": [
+    {
+      "id": "region:xishuangbanna#0",
+      "type": "region",
+      "title": "西双版纳 · 产区概况",
+      "sourceId": "xishuangbanna"
+    },
+    {
+      "id": "region:lincang#0",
+      "type": "region",
+      "title": "临沧 · 产区概况",
+      "sourceId": "lincang"
+    },
+    {
+      "id": "region:puer#0",
+      "type": "region",
+      "title": "普洱 · 产区概况",
+      "sourceId": "puer"
+    },
+    {
+      "id": "region:baoshan#0",
+      "type": "region",
+      "title": "保山及其他 · 产区概况",
+      "sourceId": "baoshan"
+    },
+    {
+      "id": "mountain:yibang#0",
+      "type": "mountain",
+      "title": "倚邦 · 山场特征",
+      "sourceId": "yibang"
+    },
+    {
+      "id": "mountain:yibang#1",
+      "type": "mountain",
+      "title": "倚邦 · 品鉴",
+      "sourceId": "yibang"
+    },
+    {
+      "id": "mountain:yibang#2",
+      "type": "mountain",
+      "title": "倚邦 · 价格与避坑",
+      "sourceId": "yibang"
+    },
+    {
+      "id": "mountain:yibang#3",
+      "type": "mountain",
+      "title": "倚邦 · 卖点与人群",
+      "sourceId": "yibang"
+    },
+    {
+      "id": "mountain:yibang#4",
+      "type": "mountain",
+      "title": "倚邦 · 冲泡建议",
+      "sourceId": "yibang"
+    },
+    {
+      "id": "mountain:bingdao#0",
+      "type": "mountain",
+      "title": "冰岛 · 山场特征",
+      "sourceId": "bingdao"
+    },
+    {
+      "id": "mountain:bingdao#1",
+      "type": "mountain",
+      "title": "冰岛 · 品鉴",
+      "sourceId": "bingdao"
+    },
+    {
+      "id": "mountain:bingdao#2",
+      "type": "mountain",
+      "title": "冰岛 · 价格与避坑",
+      "sourceId": "bingdao"
+    },
+    {
+      "id": "mountain:bingdao#3",
+      "type": "mountain",
+      "title": "冰岛 · 卖点与人群",
+      "sourceId": "bingdao"
+    },
+    {
+      "id": "mountain:bingdao#4",
+      "type": "mountain",
+      "title": "冰岛 · 冲泡建议",
+      "sourceId": "bingdao"
+    },
+    {
+      "id": "mountain:bingdao-nanpo#0",
+      "type": "mountain",
+      "title": "冰岛南迫 · 山场特征",
+      "sourceId": "bingdao-nanpo"
+    },
+    {
+      "id": "mountain:bingdao-nanpo#1",
+      "type": "mountain",
+      "title": "冰岛南迫 · 品鉴",
+      "sourceId": "bingdao-nanpo"
+    },
+    {
+      "id": "mountain:bingdao-nanpo#2",
+      "type": "mountain",
+      "title": "冰岛南迫 · 价格与避坑",
+      "sourceId": "bingdao-nanpo"
+    },
+    {
+      "id": "mountain:bingdao-nanpo#3",
+      "type": "mountain",
+      "title": "冰岛南迫 · 卖点与人群",
+      "sourceId": "bingdao-nanpo"
+    },
+    {
+      "id": "mountain:bingdao-nanpo#4",
+      "type": "mountain",
+      "title": "冰岛南迫 · 冲泡建议",
+      "sourceId": "bingdao-nanpo"
+    },
+    {
+      "id": "mountain:bingdao-dijie#0",
+      "type": "mountain",
+      "title": "冰岛地界 · 山场特征",
+      "sourceId": "bingdao-dijie"
+    },
+    {
+      "id": "mountain:bingdao-dijie#1",
+      "type": "mountain",
+      "title": "冰岛地界 · 品鉴",
+      "sourceId": "bingdao-dijie"
+    },
+    {
+      "id": "mountain:bingdao-dijie#2",
+      "type": "mountain",
+      "title": "冰岛地界 · 价格与避坑",
+      "sourceId": "bingdao-dijie"
+    },
+    {
+      "id": "mountain:bingdao-dijie#3",
+      "type": "mountain",
+      "title": "冰岛地界 · 卖点与人群",
+      "sourceId": "bingdao-dijie"
+    },
+    {
+      "id": "mountain:bingdao-dijie#4",
+      "type": "mountain",
+      "title": "冰岛地界 · 冲泡建议",
+      "sourceId": "bingdao-dijie"
+    },
+    {
+      "id": "mountain:bingdao-bawai#0",
+      "type": "mountain",
+      "title": "冰岛坝歪 · 山场特征",
+      "sourceId": "bingdao-bawai"
+    },
+    {
+      "id": "mountain:bingdao-bawai#1",
+      "type": "mountain",
+      "title": "冰岛坝歪 · 品鉴",
+      "sourceId": "bingdao-bawai"
+    },
+    {
+      "id": "mountain:bingdao-bawai#2",
+      "type": "mountain",
+      "title": "冰岛坝歪 · 价格与避坑",
+      "sourceId": "bingdao-bawai"
+    },
+    {
+      "id": "mountain:bingdao-bawai#3",
+      "type": "mountain",
+      "title": "冰岛坝歪 · 卖点与人群",
+      "sourceId": "bingdao-bawai"
+    },
+    {
+      "id": "mountain:bingdao-bawai#4",
+      "type": "mountain",
+      "title": "冰岛坝歪 · 冲泡建议",
+      "sourceId": "bingdao-bawai"
+    },
+    {
+      "id": "mountain:bingdao-nuowu#0",
+      "type": "mountain",
+      "title": "冰岛糯伍 · 山场特征",
+      "sourceId": "bingdao-nuowu"
+    },
+    {
+      "id": "mountain:bingdao-nuowu#1",
+      "type": "mountain",
+      "title": "冰岛糯伍 · 品鉴",
+      "sourceId": "bingdao-nuowu"
+    },
+    {
+      "id": "mountain:bingdao-nuowu#2",
+      "type": "mountain",
+      "title": "冰岛糯伍 · 价格与避坑",
+      "sourceId": "bingdao-nuowu"
+    },
+    {
+      "id": "mountain:bingdao-nuowu#3",
+      "type": "mountain",
+      "title": "冰岛糯伍 · 卖点与人群",
+      "sourceId": "bingdao-nuowu"
+    },
+    {
+      "id": "mountain:bingdao-nuowu#4",
+      "type": "mountain",
+      "title": "冰岛糯伍 · 冲泡建议",
+      "sourceId": "bingdao-nuowu"
+    },
+    {
+      "id": "mountain:fenghuangwo#0",
+      "type": "mountain",
+      "title": "凤凰窝 · 山场特征",
+      "sourceId": "fenghuangwo"
+    },
+    {
+      "id": "mountain:fenghuangwo#1",
+      "type": "mountain",
+      "title": "凤凰窝 · 品鉴",
+      "sourceId": "fenghuangwo"
+    },
+    {
+      "id": "mountain:fenghuangwo#2",
+      "type": "mountain",
+      "title": "凤凰窝 · 价格与避坑",
+      "sourceId": "fenghuangwo"
+    },
+    {
+      "id": "mountain:fenghuangwo#3",
+      "type": "mountain",
+      "title": "凤凰窝 · 卖点与人群",
+      "sourceId": "fenghuangwo"
+    },
+    {
+      "id": "mountain:fenghuangwo#4",
+      "type": "mountain",
+      "title": "凤凰窝 · 冲泡建议",
+      "sourceId": "fenghuangwo"
+    },
+    {
+      "id": "mountain:guafengzhai#0",
+      "type": "mountain",
+      "title": "刮风寨 · 山场特征",
+      "sourceId": "guafengzhai"
+    },
+    {
+      "id": "mountain:guafengzhai#1",
+      "type": "mountain",
+      "title": "刮风寨 · 品鉴",
+      "sourceId": "guafengzhai"
+    },
+    {
+      "id": "mountain:guafengzhai#2",
+      "type": "mountain",
+      "title": "刮风寨 · 价格与避坑",
+      "sourceId": "guafengzhai"
+    },
+    {
+      "id": "mountain:guafengzhai#3",
+      "type": "mountain",
+      "title": "刮风寨 · 卖点与人群",
+      "sourceId": "guafengzhai"
+    },
+    {
+      "id": "mountain:guafengzhai#4",
+      "type": "mountain",
+      "title": "刮风寨 · 冲泡建议",
+      "sourceId": "guafengzhai"
+    },
+    {
+      "id": "mountain:naka#0",
+      "type": "mountain",
+      "title": "勐宋那卡 · 山场特征",
+      "sourceId": "naka"
+    },
+    {
+      "id": "mountain:naka#1",
+      "type": "mountain",
+      "title": "勐宋那卡 · 品鉴",
+      "sourceId": "naka"
+    },
+    {
+      "id": "mountain:naka#2",
+      "type": "mountain",
+      "title": "勐宋那卡 · 价格与避坑",
+      "sourceId": "naka"
+    },
+    {
+      "id": "mountain:naka#3",
+      "type": "mountain",
+      "title": "勐宋那卡 · 卖点与人群",
+      "sourceId": "naka"
+    },
+    {
+      "id": "mountain:naka#4",
+      "type": "mountain",
+      "title": "勐宋那卡 · 冲泡建议",
+      "sourceId": "naka"
+    },
+    {
+      "id": "mountain:qianjiazhai#0",
+      "type": "mountain",
+      "title": "千家寨 · 山场特征",
+      "sourceId": "qianjiazhai"
+    },
+    {
+      "id": "mountain:qianjiazhai#1",
+      "type": "mountain",
+      "title": "千家寨 · 品鉴",
+      "sourceId": "qianjiazhai"
+    },
+    {
+      "id": "mountain:qianjiazhai#2",
+      "type": "mountain",
+      "title": "千家寨 · 价格与避坑",
+      "sourceId": "qianjiazhai"
+    },
+    {
+      "id": "mountain:qianjiazhai#3",
+      "type": "mountain",
+      "title": "千家寨 · 卖点与人群",
+      "sourceId": "qianjiazhai"
+    },
+    {
+      "id": "mountain:qianjiazhai#4",
+      "type": "mountain",
+      "title": "千家寨 · 冲泡建议",
+      "sourceId": "qianjiazhai"
+    },
+    {
+      "id": "mountain:banpolaoqai#0",
+      "type": "mountain",
+      "title": "半坡老寨 · 山场特征",
+      "sourceId": "banpolaoqai"
+    },
+    {
+      "id": "mountain:banpolaoqai#1",
+      "type": "mountain",
+      "title": "半坡老寨 · 品鉴",
+      "sourceId": "banpolaoqai"
+    },
+    {
+      "id": "mountain:banpolaoqai#2",
+      "type": "mountain",
+      "title": "半坡老寨 · 价格与避坑",
+      "sourceId": "banpolaoqai"
+    },
+    {
+      "id": "mountain:banpolaoqai#3",
+      "type": "mountain",
+      "title": "半坡老寨 · 卖点与人群",
+      "sourceId": "banpolaoqai"
+    },
+    {
+      "id": "mountain:banpolaoqai#4",
+      "type": "mountain",
+      "title": "半坡老寨 · 冲泡建议",
+      "sourceId": "banpolaoqai"
+    },
+    {
+      "id": "mountain:nanbenlaozhai#0",
+      "type": "mountain",
+      "title": "南本老寨 · 山场特征",
+      "sourceId": "nanbenlaozhai"
+    },
+    {
+      "id": "mountain:nanbenlaozhai#1",
+      "type": "mountain",
+      "title": "南本老寨 · 品鉴",
+      "sourceId": "nanbenlaozhai"
+    },
+    {
+      "id": "mountain:nanbenlaozhai#2",
+      "type": "mountain",
+      "title": "南本老寨 · 价格与避坑",
+      "sourceId": "nanbenlaozhai"
+    },
+    {
+      "id": "mountain:nanbenlaozhai#3",
+      "type": "mountain",
+      "title": "南本老寨 · 卖点与人群",
+      "sourceId": "nanbenlaozhai"
+    },
+    {
+      "id": "mountain:nanbenlaozhai#4",
+      "type": "mountain",
+      "title": "南本老寨 · 冲泡建议",
+      "sourceId": "nanbenlaozhai"
+    },
+    {
+      "id": "mountain:nannuoshan#0",
+      "type": "mountain",
+      "title": "南糯山 · 山场特征",
+      "sourceId": "nannuoshan"
+    },
+    {
+      "id": "mountain:nannuoshan#1",
+      "type": "mountain",
+      "title": "南糯山 · 品鉴",
+      "sourceId": "nannuoshan"
+    },
+    {
+      "id": "mountain:nannuoshan#2",
+      "type": "mountain",
+      "title": "南糯山 · 价格与避坑",
+      "sourceId": "nannuoshan"
+    },
+    {
+      "id": "mountain:nannuoshan#3",
+      "type": "mountain",
+      "title": "南糯山 · 卖点与人群",
+      "sourceId": "nannuoshan"
+    },
+    {
+      "id": "mountain:nannuoshan#4",
+      "type": "mountain",
+      "title": "南糯山 · 冲泡建议",
+      "sourceId": "nannuoshan"
+    },
+    {
+      "id": "mountain:kunlushan#0",
+      "type": "mountain",
+      "title": "困鹿山 · 山场特征",
+      "sourceId": "kunlushan"
+    },
+    {
+      "id": "mountain:kunlushan#1",
+      "type": "mountain",
+      "title": "困鹿山 · 品鉴",
+      "sourceId": "kunlushan"
+    },
+    {
+      "id": "mountain:kunlushan#2",
+      "type": "mountain",
+      "title": "困鹿山 · 价格与避坑",
+      "sourceId": "kunlushan"
+    },
+    {
+      "id": "mountain:kunlushan#3",
+      "type": "mountain",
+      "title": "困鹿山 · 卖点与人群",
+      "sourceId": "kunlushan"
+    },
+    {
+      "id": "mountain:kunlushan#4",
+      "type": "mountain",
+      "title": "困鹿山 · 冲泡建议",
+      "sourceId": "kunlushan"
+    },
+    {
+      "id": "mountain:daxueshan#0",
+      "type": "mountain",
+      "title": "大雪山 · 山场特征",
+      "sourceId": "daxueshan"
+    },
+    {
+      "id": "mountain:daxueshan#1",
+      "type": "mountain",
+      "title": "大雪山 · 品鉴",
+      "sourceId": "daxueshan"
+    },
+    {
+      "id": "mountain:daxueshan#2",
+      "type": "mountain",
+      "title": "大雪山 · 价格与避坑",
+      "sourceId": "daxueshan"
+    },
+    {
+      "id": "mountain:daxueshan#3",
+      "type": "mountain",
+      "title": "大雪山 · 卖点与人群",
+      "sourceId": "daxueshan"
+    },
+    {
+      "id": "mountain:daxueshan#4",
+      "type": "mountain",
+      "title": "大雪山 · 冲泡建议",
+      "sourceId": "daxueshan"
+    },
+    {
+      "id": "mountain:tianmenshan#0",
+      "type": "mountain",
+      "title": "天门山 · 山场特征",
+      "sourceId": "tianmenshan"
+    },
+    {
+      "id": "mountain:tianmenshan#1",
+      "type": "mountain",
+      "title": "天门山 · 品鉴",
+      "sourceId": "tianmenshan"
+    },
+    {
+      "id": "mountain:tianmenshan#2",
+      "type": "mountain",
+      "title": "天门山 · 价格与避坑",
+      "sourceId": "tianmenshan"
+    },
+    {
+      "id": "mountain:tianmenshan#3",
+      "type": "mountain",
+      "title": "天门山 · 卖点与人群",
+      "sourceId": "tianmenshan"
+    },
+    {
+      "id": "mountain:tianmenshan#4",
+      "type": "mountain",
+      "title": "天门山 · 冲泡建议",
+      "sourceId": "tianmenshan"
+    },
+    {
+      "id": "mountain:nahan#0",
+      "type": "mountain",
+      "title": "娜罕 · 山场特征",
+      "sourceId": "nahan"
+    },
+    {
+      "id": "mountain:nahan#1",
+      "type": "mountain",
+      "title": "娜罕 · 品鉴",
+      "sourceId": "nahan"
+    },
+    {
+      "id": "mountain:nahan#2",
+      "type": "mountain",
+      "title": "娜罕 · 价格与避坑",
+      "sourceId": "nahan"
+    },
+    {
+      "id": "mountain:nahan#3",
+      "type": "mountain",
+      "title": "娜罕 · 卖点与人群",
+      "sourceId": "nahan"
+    },
+    {
+      "id": "mountain:nahan#4",
+      "type": "mountain",
+      "title": "娜罕 · 冲泡建议",
+      "sourceId": "nahan"
+    },
+    {
+      "id": "mountain:xiaohusai#0",
+      "type": "mountain",
+      "title": "小户赛 · 山场特征",
+      "sourceId": "xiaohusai"
+    },
+    {
+      "id": "mountain:xiaohusai#1",
+      "type": "mountain",
+      "title": "小户赛 · 品鉴",
+      "sourceId": "xiaohusai"
+    },
+    {
+      "id": "mountain:xiaohusai#2",
+      "type": "mountain",
+      "title": "小户赛 · 价格与避坑",
+      "sourceId": "xiaohusai"
+    },
+    {
+      "id": "mountain:xiaohusai#3",
+      "type": "mountain",
+      "title": "小户赛 · 卖点与人群",
+      "sourceId": "xiaohusai"
+    },
+    {
+      "id": "mountain:xiaohusai#4",
+      "type": "mountain",
+      "title": "小户赛 · 冲泡建议",
+      "sourceId": "xiaohusai"
+    },
+    {
+      "id": "mountain:bada#0",
+      "type": "mountain",
+      "title": "巴达 · 山场特征",
+      "sourceId": "bada"
+    },
+    {
+      "id": "mountain:bada#1",
+      "type": "mountain",
+      "title": "巴达 · 品鉴",
+      "sourceId": "bada"
+    },
+    {
+      "id": "mountain:bada#2",
+      "type": "mountain",
+      "title": "巴达 · 价格与避坑",
+      "sourceId": "bada"
+    },
+    {
+      "id": "mountain:bada#3",
+      "type": "mountain",
+      "title": "巴达 · 卖点与人群",
+      "sourceId": "bada"
+    },
+    {
+      "id": "mountain:bada#4",
+      "type": "mountain",
+      "title": "巴达 · 冲泡建议",
+      "sourceId": "bada"
+    },
+    {
+      "id": "mountain:bulangshan#0",
+      "type": "mountain",
+      "title": "布朗山 · 山场特征",
+      "sourceId": "bulangshan"
+    },
+    {
+      "id": "mountain:bulangshan#1",
+      "type": "mountain",
+      "title": "布朗山 · 品鉴",
+      "sourceId": "bulangshan"
+    },
+    {
+      "id": "mountain:bulangshan#2",
+      "type": "mountain",
+      "title": "布朗山 · 价格与避坑",
+      "sourceId": "bulangshan"
+    },
+    {
+      "id": "mountain:bulangshan#3",
+      "type": "mountain",
+      "title": "布朗山 · 卖点与人群",
+      "sourceId": "bulangshan"
+    },
+    {
+      "id": "mountain:bulangshan#4",
+      "type": "mountain",
+      "title": "布朗山 · 冲泡建议",
+      "sourceId": "bulangshan"
+    },
+    {
+      "id": "mountain:wangong#0",
+      "type": "mountain",
+      "title": "弯弓 · 山场特征",
+      "sourceId": "wangong"
+    },
+    {
+      "id": "mountain:wangong#1",
+      "type": "mountain",
+      "title": "弯弓 · 品鉴",
+      "sourceId": "wangong"
+    },
+    {
+      "id": "mountain:wangong#2",
+      "type": "mountain",
+      "title": "弯弓 · 价格与避坑",
+      "sourceId": "wangong"
+    },
+    {
+      "id": "mountain:wangong#3",
+      "type": "mountain",
+      "title": "弯弓 · 卖点与人群",
+      "sourceId": "wangong"
+    },
+    {
+      "id": "mountain:wangong#4",
+      "type": "mountain",
+      "title": "弯弓 · 冲泡建议",
+      "sourceId": "wangong"
+    },
+    {
+      "id": "mountain:mangfei#0",
+      "type": "mountain",
+      "title": "忙肺 · 山场特征",
+      "sourceId": "mangfei"
+    },
+    {
+      "id": "mountain:mangfei#1",
+      "type": "mountain",
+      "title": "忙肺 · 品鉴",
+      "sourceId": "mangfei"
+    },
+    {
+      "id": "mountain:mangfei#2",
+      "type": "mountain",
+      "title": "忙肺 · 价格与避坑",
+      "sourceId": "mangfei"
+    },
+    {
+      "id": "mountain:mangfei#3",
+      "type": "mountain",
+      "title": "忙肺 · 卖点与人群",
+      "sourceId": "mangfei"
+    },
+    {
+      "id": "mountain:mangfei#4",
+      "type": "mountain",
+      "title": "忙肺 · 冲泡建议",
+      "sourceId": "mangfei"
+    },
+    {
+      "id": "mountain:youle#0",
+      "type": "mountain",
+      "title": "攸乐 · 山场特征",
+      "sourceId": "youle"
+    },
+    {
+      "id": "mountain:youle#1",
+      "type": "mountain",
+      "title": "攸乐 · 品鉴",
+      "sourceId": "youle"
+    },
+    {
+      "id": "mountain:youle#2",
+      "type": "mountain",
+      "title": "攸乐 · 价格与避坑",
+      "sourceId": "youle"
+    },
+    {
+      "id": "mountain:youle#3",
+      "type": "mountain",
+      "title": "攸乐 · 卖点与人群",
+      "sourceId": "youle"
+    },
+    {
+      "id": "mountain:youle#4",
+      "type": "mountain",
+      "title": "攸乐 · 冲泡建议",
+      "sourceId": "youle"
+    },
+    {
+      "id": "mountain:xinbanzhang#0",
+      "type": "mountain",
+      "title": "新班章 · 山场特征",
+      "sourceId": "xinbanzhang"
+    },
+    {
+      "id": "mountain:xinbanzhang#1",
+      "type": "mountain",
+      "title": "新班章 · 品鉴",
+      "sourceId": "xinbanzhang"
+    },
+    {
+      "id": "mountain:xinbanzhang#2",
+      "type": "mountain",
+      "title": "新班章 · 价格与避坑",
+      "sourceId": "xinbanzhang"
+    },
+    {
+      "id": "mountain:xinbanzhang#3",
+      "type": "mountain",
+      "title": "新班章 · 卖点与人群",
+      "sourceId": "xinbanzhang"
+    },
+    {
+      "id": "mountain:xinbanzhang#4",
+      "type": "mountain",
+      "title": "新班章 · 冲泡建议",
+      "sourceId": "xinbanzhang"
+    },
+    {
+      "id": "mountain:wuliangshan#0",
+      "type": "mountain",
+      "title": "无量山 · 山场特征",
+      "sourceId": "wuliangshan"
+    },
+    {
+      "id": "mountain:wuliangshan#1",
+      "type": "mountain",
+      "title": "无量山 · 品鉴",
+      "sourceId": "wuliangshan"
+    },
+    {
+      "id": "mountain:wuliangshan#2",
+      "type": "mountain",
+      "title": "无量山 · 价格与避坑",
+      "sourceId": "wuliangshan"
+    },
+    {
+      "id": "mountain:wuliangshan#3",
+      "type": "mountain",
+      "title": "无量山 · 卖点与人群",
+      "sourceId": "wuliangshan"
+    },
+    {
+      "id": "mountain:wuliangshan#4",
+      "type": "mountain",
+      "title": "无量山 · 冲泡建议",
+      "sourceId": "wuliangshan"
+    },
+    {
+      "id": "mountain:yiwuzhengshan#0",
+      "type": "mountain",
+      "title": "易武正山 · 山场特征",
+      "sourceId": "yiwuzhengshan"
+    },
+    {
+      "id": "mountain:yiwuzhengshan#1",
+      "type": "mountain",
+      "title": "易武正山 · 品鉴",
+      "sourceId": "yiwuzhengshan"
+    },
+    {
+      "id": "mountain:yiwuzhengshan#2",
+      "type": "mountain",
+      "title": "易武正山 · 价格与避坑",
+      "sourceId": "yiwuzhengshan"
+    },
+    {
+      "id": "mountain:yiwuzhengshan#3",
+      "type": "mountain",
+      "title": "易武正山 · 卖点与人群",
+      "sourceId": "yiwuzhengshan"
+    },
+    {
+      "id": "mountain:yiwuzhengshan#4",
+      "type": "mountain",
+      "title": "易武正山 · 冲泡建议",
+      "sourceId": "yiwuzhengshan"
+    },
+    {
+      "id": "mountain:xigui#0",
+      "type": "mountain",
+      "title": "昔归 · 山场特征",
+      "sourceId": "xigui"
+    },
+    {
+      "id": "mountain:xigui#1",
+      "type": "mountain",
+      "title": "昔归 · 品鉴",
+      "sourceId": "xigui"
+    },
+    {
+      "id": "mountain:xigui#2",
+      "type": "mountain",
+      "title": "昔归 · 价格与避坑",
+      "sourceId": "xigui"
+    },
+    {
+      "id": "mountain:xigui#3",
+      "type": "mountain",
+      "title": "昔归 · 卖点与人群",
+      "sourceId": "xigui"
+    },
+    {
+      "id": "mountain:xigui#4",
+      "type": "mountain",
+      "title": "昔归 · 冲泡建议",
+      "sourceId": "xigui"
+    },
+    {
+      "id": "mountain:jinggu#0",
+      "type": "mountain",
+      "title": "景谷 · 山场特征",
+      "sourceId": "jinggu"
+    },
+    {
+      "id": "mountain:jinggu#1",
+      "type": "mountain",
+      "title": "景谷 · 品鉴",
+      "sourceId": "jinggu"
+    },
+    {
+      "id": "mountain:jinggu#2",
+      "type": "mountain",
+      "title": "景谷 · 价格与避坑",
+      "sourceId": "jinggu"
+    },
+    {
+      "id": "mountain:jinggu#3",
+      "type": "mountain",
+      "title": "景谷 · 卖点与人群",
+      "sourceId": "jinggu"
+    },
+    {
+      "id": "mountain:jinggu#4",
+      "type": "mountain",
+      "title": "景谷 · 冲泡建议",
+      "sourceId": "jinggu"
+    },
+    {
+      "id": "mountain:jingmai#0",
+      "type": "mountain",
+      "title": "景迈 · 山场特征",
+      "sourceId": "jingmai"
+    },
+    {
+      "id": "mountain:jingmai#1",
+      "type": "mountain",
+      "title": "景迈 · 品鉴",
+      "sourceId": "jingmai"
+    },
+    {
+      "id": "mountain:jingmai#2",
+      "type": "mountain",
+      "title": "景迈 · 价格与避坑",
+      "sourceId": "jingmai"
+    },
+    {
+      "id": "mountain:jingmai#3",
+      "type": "mountain",
+      "title": "景迈 · 卖点与人群",
+      "sourceId": "jingmai"
+    },
+    {
+      "id": "mountain:jingmai#4",
+      "type": "mountain",
+      "title": "景迈 · 冲泡建议",
+      "sourceId": "jingmai"
+    },
+    {
+      "id": "mountain:mansong#0",
+      "type": "mountain",
+      "title": "曼松 · 山场特征",
+      "sourceId": "mansong"
+    },
+    {
+      "id": "mountain:mansong#1",
+      "type": "mountain",
+      "title": "曼松 · 品鉴",
+      "sourceId": "mansong"
+    },
+    {
+      "id": "mountain:mansong#2",
+      "type": "mountain",
+      "title": "曼松 · 价格与避坑",
+      "sourceId": "mansong"
+    },
+    {
+      "id": "mountain:mansong#3",
+      "type": "mountain",
+      "title": "曼松 · 卖点与人群",
+      "sourceId": "mansong"
+    },
+    {
+      "id": "mountain:mansong#4",
+      "type": "mountain",
+      "title": "曼松 · 冲泡建议",
+      "sourceId": "mansong"
+    },
+    {
+      "id": "mountain:mannuo#0",
+      "type": "mountain",
+      "title": "曼糯 · 山场特征",
+      "sourceId": "mannuo"
+    },
+    {
+      "id": "mountain:mannuo#1",
+      "type": "mountain",
+      "title": "曼糯 · 品鉴",
+      "sourceId": "mannuo"
+    },
+    {
+      "id": "mountain:mannuo#2",
+      "type": "mountain",
+      "title": "曼糯 · 价格与避坑",
+      "sourceId": "mannuo"
+    },
+    {
+      "id": "mountain:mannuo#3",
+      "type": "mountain",
+      "title": "曼糯 · 卖点与人群",
+      "sourceId": "mannuo"
+    },
+    {
+      "id": "mountain:mannuo#4",
+      "type": "mountain",
+      "title": "曼糯 · 冲泡建议",
+      "sourceId": "mannuo"
+    },
+    {
+      "id": "mountain:huazhuliangzi#0",
+      "type": "mountain",
+      "title": "滑竹梁子 · 山场特征",
+      "sourceId": "huazhuliangzi"
+    },
+    {
+      "id": "mountain:huazhuliangzi#1",
+      "type": "mountain",
+      "title": "滑竹梁子 · 品鉴",
+      "sourceId": "huazhuliangzi"
+    },
+    {
+      "id": "mountain:huazhuliangzi#2",
+      "type": "mountain",
+      "title": "滑竹梁子 · 价格与避坑",
+      "sourceId": "huazhuliangzi"
+    },
+    {
+      "id": "mountain:huazhuliangzi#3",
+      "type": "mountain",
+      "title": "滑竹梁子 · 卖点与人群",
+      "sourceId": "huazhuliangzi"
+    },
+    {
+      "id": "mountain:huazhuliangzi#4",
+      "type": "mountain",
+      "title": "滑竹梁子 · 冲泡建议",
+      "sourceId": "huazhuliangzi"
+    },
+    {
+      "id": "mountain:banpen#0",
+      "type": "mountain",
+      "title": "班盆 · 山场特征",
+      "sourceId": "banpen"
+    },
+    {
+      "id": "mountain:banpen#1",
+      "type": "mountain",
+      "title": "班盆 · 品鉴",
+      "sourceId": "banpen"
+    },
+    {
+      "id": "mountain:banpen#2",
+      "type": "mountain",
+      "title": "班盆 · 价格与避坑",
+      "sourceId": "banpen"
+    },
+    {
+      "id": "mountain:banpen#3",
+      "type": "mountain",
+      "title": "班盆 · 卖点与人群",
+      "sourceId": "banpen"
+    },
+    {
+      "id": "mountain:banpen#4",
+      "type": "mountain",
+      "title": "班盆 · 冲泡建议",
+      "sourceId": "banpen"
+    },
+    {
+      "id": "mountain:baiyingshan#0",
+      "type": "mountain",
+      "title": "白莺山 · 山场特征",
+      "sourceId": "baiyingshan"
+    },
+    {
+      "id": "mountain:baiyingshan#1",
+      "type": "mountain",
+      "title": "白莺山 · 品鉴",
+      "sourceId": "baiyingshan"
+    },
+    {
+      "id": "mountain:baiyingshan#2",
+      "type": "mountain",
+      "title": "白莺山 · 价格与避坑",
+      "sourceId": "baiyingshan"
+    },
+    {
+      "id": "mountain:baiyingshan#3",
+      "type": "mountain",
+      "title": "白莺山 · 卖点与人群",
+      "sourceId": "baiyingshan"
+    },
+    {
+      "id": "mountain:baiyingshan#4",
+      "type": "mountain",
+      "title": "白莺山 · 冲泡建议",
+      "sourceId": "baiyingshan"
+    },
+    {
+      "id": "mountain:laomane#0",
+      "type": "mountain",
+      "title": "老曼峨 · 山场特征",
+      "sourceId": "laomane"
+    },
+    {
+      "id": "mountain:laomane#1",
+      "type": "mountain",
+      "title": "老曼峨 · 品鉴",
+      "sourceId": "laomane"
+    },
+    {
+      "id": "mountain:laomane#2",
+      "type": "mountain",
+      "title": "老曼峨 · 价格与避坑",
+      "sourceId": "laomane"
+    },
+    {
+      "id": "mountain:laomane#3",
+      "type": "mountain",
+      "title": "老曼峨 · 卖点与人群",
+      "sourceId": "laomane"
+    },
+    {
+      "id": "mountain:laomane#4",
+      "type": "mountain",
+      "title": "老曼峨 · 冲泡建议",
+      "sourceId": "laomane"
+    },
+    {
+      "id": "mountain:laobanzhang#0",
+      "type": "mountain",
+      "title": "老班章 · 山场特征",
+      "sourceId": "laobanzhang"
+    },
+    {
+      "id": "mountain:laobanzhang#1",
+      "type": "mountain",
+      "title": "老班章 · 品鉴",
+      "sourceId": "laobanzhang"
+    },
+    {
+      "id": "mountain:laobanzhang#2",
+      "type": "mountain",
+      "title": "老班章 · 价格与避坑（第1段）",
+      "sourceId": "laobanzhang"
+    },
+    {
+      "id": "mountain:laobanzhang#3",
+      "type": "mountain",
+      "title": "老班章 · 价格与避坑（第2段）",
+      "sourceId": "laobanzhang"
+    },
+    {
+      "id": "mountain:laobanzhang#4",
+      "type": "mountain",
+      "title": "老班章 · 卖点与人群",
+      "sourceId": "laobanzhang"
+    },
+    {
+      "id": "mountain:laobanzhang#5",
+      "type": "mountain",
+      "title": "老班章 · 冲泡建议",
+      "sourceId": "laobanzhang"
+    },
+    {
+      "id": "mountain:luoshuidong#0",
+      "type": "mountain",
+      "title": "落水洞 · 山场特征",
+      "sourceId": "luoshuidong"
+    },
+    {
+      "id": "mountain:luoshuidong#1",
+      "type": "mountain",
+      "title": "落水洞 · 品鉴",
+      "sourceId": "luoshuidong"
+    },
+    {
+      "id": "mountain:luoshuidong#2",
+      "type": "mountain",
+      "title": "落水洞 · 价格与避坑",
+      "sourceId": "luoshuidong"
+    },
+    {
+      "id": "mountain:luoshuidong#3",
+      "type": "mountain",
+      "title": "落水洞 · 卖点与人群",
+      "sourceId": "luoshuidong"
+    },
+    {
+      "id": "mountain:luoshuidong#4",
+      "type": "mountain",
+      "title": "落水洞 · 冲泡建议",
+      "sourceId": "luoshuidong"
+    },
+    {
+      "id": "mountain:bohetang#0",
+      "type": "mountain",
+      "title": "薄荷塘 · 山场特征",
+      "sourceId": "bohetang"
+    },
+    {
+      "id": "mountain:bohetang#1",
+      "type": "mountain",
+      "title": "薄荷塘 · 品鉴",
+      "sourceId": "bohetang"
+    },
+    {
+      "id": "mountain:bohetang#2",
+      "type": "mountain",
+      "title": "薄荷塘 · 价格与避坑",
+      "sourceId": "bohetang"
+    },
+    {
+      "id": "mountain:bohetang#3",
+      "type": "mountain",
+      "title": "薄荷塘 · 卖点与人群",
+      "sourceId": "bohetang"
+    },
+    {
+      "id": "mountain:bohetang#4",
+      "type": "mountain",
+      "title": "薄荷塘 · 冲泡建议",
+      "sourceId": "bohetang"
+    },
+    {
+      "id": "mountain:manzhuan#0",
+      "type": "mountain",
+      "title": "蛮砖 · 山场特征",
+      "sourceId": "manzhuan"
+    },
+    {
+      "id": "mountain:manzhuan#1",
+      "type": "mountain",
+      "title": "蛮砖 · 品鉴",
+      "sourceId": "manzhuan"
+    },
+    {
+      "id": "mountain:manzhuan#2",
+      "type": "mountain",
+      "title": "蛮砖 · 价格与避坑",
+      "sourceId": "manzhuan"
+    },
+    {
+      "id": "mountain:manzhuan#3",
+      "type": "mountain",
+      "title": "蛮砖 · 卖点与人群",
+      "sourceId": "manzhuan"
+    },
+    {
+      "id": "mountain:manzhuan#4",
+      "type": "mountain",
+      "title": "蛮砖 · 冲泡建议",
+      "sourceId": "manzhuan"
+    },
+    {
+      "id": "mountain:hekai#0",
+      "type": "mountain",
+      "title": "贺开 · 山场特征",
+      "sourceId": "hekai"
+    },
+    {
+      "id": "mountain:hekai#1",
+      "type": "mountain",
+      "title": "贺开 · 品鉴",
+      "sourceId": "hekai"
+    },
+    {
+      "id": "mountain:hekai#2",
+      "type": "mountain",
+      "title": "贺开 · 价格与避坑",
+      "sourceId": "hekai"
+    },
+    {
+      "id": "mountain:hekai#3",
+      "type": "mountain",
+      "title": "贺开 · 卖点与人群",
+      "sourceId": "hekai"
+    },
+    {
+      "id": "mountain:hekai#4",
+      "type": "mountain",
+      "title": "贺开 · 冲泡建议",
+      "sourceId": "hekai"
+    },
+    {
+      "id": "mountain:bangdong#0",
+      "type": "mountain",
+      "title": "邦东 · 山场特征",
+      "sourceId": "bangdong"
+    },
+    {
+      "id": "mountain:bangdong#1",
+      "type": "mountain",
+      "title": "邦东 · 品鉴",
+      "sourceId": "bangdong"
+    },
+    {
+      "id": "mountain:bangdong#2",
+      "type": "mountain",
+      "title": "邦东 · 价格与避坑",
+      "sourceId": "bangdong"
+    },
+    {
+      "id": "mountain:bangdong#3",
+      "type": "mountain",
+      "title": "邦东 · 卖点与人群",
+      "sourceId": "bangdong"
+    },
+    {
+      "id": "mountain:bangdong#4",
+      "type": "mountain",
+      "title": "邦东 · 冲泡建议",
+      "sourceId": "bangdong"
+    },
+    {
+      "id": "mountain:bangwai#0",
+      "type": "mountain",
+      "title": "邦崴 · 山场特征",
+      "sourceId": "bangwai"
+    },
+    {
+      "id": "mountain:bangwai#1",
+      "type": "mountain",
+      "title": "邦崴 · 品鉴",
+      "sourceId": "bangwai"
+    },
+    {
+      "id": "mountain:bangwai#2",
+      "type": "mountain",
+      "title": "邦崴 · 价格与避坑",
+      "sourceId": "bangwai"
+    },
+    {
+      "id": "mountain:bangwai#3",
+      "type": "mountain",
+      "title": "邦崴 · 卖点与人群",
+      "sourceId": "bangwai"
+    },
+    {
+      "id": "mountain:bangwai#4",
+      "type": "mountain",
+      "title": "邦崴 · 冲泡建议",
+      "sourceId": "bangwai"
+    },
+    {
+      "id": "mountain:gedeng#0",
+      "type": "mountain",
+      "title": "革登 · 山场特征",
+      "sourceId": "gedeng"
+    },
+    {
+      "id": "mountain:gedeng#1",
+      "type": "mountain",
+      "title": "革登 · 品鉴",
+      "sourceId": "gedeng"
+    },
+    {
+      "id": "mountain:gedeng#2",
+      "type": "mountain",
+      "title": "革登 · 价格与避坑",
+      "sourceId": "gedeng"
+    },
+    {
+      "id": "mountain:gedeng#3",
+      "type": "mountain",
+      "title": "革登 · 卖点与人群",
+      "sourceId": "gedeng"
+    },
+    {
+      "id": "mountain:gedeng#4",
+      "type": "mountain",
+      "title": "革登 · 冲泡建议",
+      "sourceId": "gedeng"
+    },
+    {
+      "id": "mountain:mahei#0",
+      "type": "mountain",
+      "title": "麻黑 · 山场特征",
+      "sourceId": "mahei"
+    },
+    {
+      "id": "mountain:mahei#1",
+      "type": "mountain",
+      "title": "麻黑 · 品鉴",
+      "sourceId": "mahei"
+    },
+    {
+      "id": "mountain:mahei#2",
+      "type": "mountain",
+      "title": "麻黑 · 价格与避坑",
+      "sourceId": "mahei"
+    },
+    {
+      "id": "mountain:mahei#3",
+      "type": "mountain",
+      "title": "麻黑 · 卖点与人群",
+      "sourceId": "mahei"
+    },
+    {
+      "id": "mountain:mahei#4",
+      "type": "mountain",
+      "title": "麻黑 · 冲泡建议",
+      "sourceId": "mahei"
+    },
+    {
+      "id": "product:zhongqi-cha#0",
+      "type": "product",
+      "title": "中期茶 · 概览",
+      "sourceId": "zhongqi-cha"
+    },
+    {
+      "id": "product:zhongqi-cha#1",
+      "type": "product",
+      "title": "中期茶 · 要点",
+      "sourceId": "zhongqi-cha"
+    },
+    {
+      "id": "product:zhongqi-cha#2",
+      "type": "product",
+      "title": "中期茶 · 卖点与人群",
+      "sourceId": "zhongqi-cha"
+    },
+    {
+      "id": "product:zhongqi-cha#3",
+      "type": "product",
+      "title": "中期茶 · 避坑",
+      "sourceId": "zhongqi-cha"
+    },
+    {
+      "id": "product:zhongqi-cha#4",
+      "type": "product",
+      "title": "中期茶 · 冲泡建议",
+      "sourceId": "zhongqi-cha"
+    },
+    {
+      "id": "product:bingdao-wuzhai#0",
+      "type": "product",
+      "title": "冰岛五寨 · 概览",
+      "sourceId": "bingdao-wuzhai"
+    },
+    {
+      "id": "product:bingdao-wuzhai#1",
+      "type": "product",
+      "title": "冰岛五寨 · 要点",
+      "sourceId": "bingdao-wuzhai"
+    },
+    {
+      "id": "product:bingdao-wuzhai#2",
+      "type": "product",
+      "title": "冰岛五寨 · 卖点与人群",
+      "sourceId": "bingdao-wuzhai"
+    },
+    {
+      "id": "product:bingdao-wuzhai#3",
+      "type": "product",
+      "title": "冰岛五寨 · 避坑",
+      "sourceId": "bingdao-wuzhai"
+    },
+    {
+      "id": "product:bingdao-wuzhai#4",
+      "type": "product",
+      "title": "冰岛五寨 · 冲泡建议",
+      "sourceId": "bingdao-wuzhai"
+    },
+    {
+      "id": "product:chongpao-shuiwen#0",
+      "type": "product",
+      "title": "冲泡水温 · 概览",
+      "sourceId": "chongpao-shuiwen"
+    },
+    {
+      "id": "product:chongpao-shuiwen#1",
+      "type": "product",
+      "title": "冲泡水温 · 要点",
+      "sourceId": "chongpao-shuiwen"
+    },
+    {
+      "id": "product:chongpao-shuiwen#2",
+      "type": "product",
+      "title": "冲泡水温 · 卖点与人群",
+      "sourceId": "chongpao-shuiwen"
+    },
+    {
+      "id": "product:chongpao-shuiwen#3",
+      "type": "product",
+      "title": "冲泡水温 · 避坑",
+      "sourceId": "chongpao-shuiwen"
+    },
+    {
+      "id": "product:chongpao-shuiwen#4",
+      "type": "product",
+      "title": "冲泡水温 · 冲泡建议",
+      "sourceId": "chongpao-shuiwen"
+    },
+    {
+      "id": "product:danzhu#0",
+      "type": "product",
+      "title": "单株 · 概览",
+      "sourceId": "danzhu"
+    },
+    {
+      "id": "product:danzhu#1",
+      "type": "product",
+      "title": "单株 · 要点",
+      "sourceId": "danzhu"
+    },
+    {
+      "id": "product:danzhu#2",
+      "type": "product",
+      "title": "单株 · 卖点与人群",
+      "sourceId": "danzhu"
+    },
+    {
+      "id": "product:danzhu#3",
+      "type": "product",
+      "title": "单株 · 避坑",
+      "sourceId": "danzhu"
+    },
+    {
+      "id": "product:danzhu#4",
+      "type": "product",
+      "title": "单株 · 冲泡建议",
+      "sourceId": "danzhu"
+    },
+    {
+      "id": "product:gushu-dashu-xiaoshu#0",
+      "type": "product",
+      "title": "古树/大树/小树 · 概览",
+      "sourceId": "gushu-dashu-xiaoshu"
+    },
+    {
+      "id": "product:gushu-dashu-xiaoshu#1",
+      "type": "product",
+      "title": "古树/大树/小树 · 要点",
+      "sourceId": "gushu-dashu-xiaoshu"
+    },
+    {
+      "id": "product:gushu-dashu-xiaoshu#2",
+      "type": "product",
+      "title": "古树/大树/小树 · 卖点与人群",
+      "sourceId": "gushu-dashu-xiaoshu"
+    },
+    {
+      "id": "product:gushu-dashu-xiaoshu#3",
+      "type": "product",
+      "title": "古树/大树/小树 · 避坑",
+      "sourceId": "gushu-dashu-xiaoshu"
+    },
+    {
+      "id": "product:gushu-dashu-xiaoshu#4",
+      "type": "product",
+      "title": "古树/大树/小树 · 冲泡建议",
+      "sourceId": "gushu-dashu-xiaoshu"
+    },
+    {
+      "id": "product:taidi-cha#0",
+      "type": "product",
+      "title": "台地茶 · 概览",
+      "sourceId": "taidi-cha"
+    },
+    {
+      "id": "product:taidi-cha#1",
+      "type": "product",
+      "title": "台地茶 · 要点",
+      "sourceId": "taidi-cha"
+    },
+    {
+      "id": "product:taidi-cha#2",
+      "type": "product",
+      "title": "台地茶 · 卖点与人群",
+      "sourceId": "taidi-cha"
+    },
+    {
+      "id": "product:taidi-cha#3",
+      "type": "product",
+      "title": "台地茶 · 避坑",
+      "sourceId": "taidi-cha"
+    },
+    {
+      "id": "product:taidi-cha#4",
+      "type": "product",
+      "title": "台地茶 · 冲泡建议",
+      "sourceId": "taidi-cha"
+    },
+    {
+      "id": "product:haoji-yinji-qizi#0",
+      "type": "product",
+      "title": "号级/印级/七子饼 · 概览",
+      "sourceId": "haoji-yinji-qizi"
+    },
+    {
+      "id": "product:haoji-yinji-qizi#1",
+      "type": "product",
+      "title": "号级/印级/七子饼 · 要点",
+      "sourceId": "haoji-yinji-qizi"
+    },
+    {
+      "id": "product:haoji-yinji-qizi#2",
+      "type": "product",
+      "title": "号级/印级/七子饼 · 卖点与人群",
+      "sourceId": "haoji-yinji-qizi"
+    },
+    {
+      "id": "product:haoji-yinji-qizi#3",
+      "type": "product",
+      "title": "号级/印级/七子饼 · 避坑",
+      "sourceId": "haoji-yinji-qizi"
+    },
+    {
+      "id": "product:haoji-yinji-qizi#4",
+      "type": "product",
+      "title": "号级/印级/七子饼 · 冲泡建议",
+      "sourceId": "haoji-yinji-qizi"
+    },
+    {
+      "id": "product:houyun#0",
+      "type": "product",
+      "title": "喉韵 · 概览",
+      "sourceId": "houyun"
+    },
+    {
+      "id": "product:houyun#1",
+      "type": "product",
+      "title": "喉韵 · 要点",
+      "sourceId": "houyun"
+    },
+    {
+      "id": "product:houyun#2",
+      "type": "product",
+      "title": "喉韵 · 卖点与人群",
+      "sourceId": "houyun"
+    },
+    {
+      "id": "product:houyun#3",
+      "type": "product",
+      "title": "喉韵 · 避坑",
+      "sourceId": "houyun"
+    },
+    {
+      "id": "product:houyun#4",
+      "type": "product",
+      "title": "喉韵 · 冲泡建议",
+      "sourceId": "houyun"
+    },
+    {
+      "id": "product:huigan-shengjin#0",
+      "type": "product",
+      "title": "回甘与生津 · 概览",
+      "sourceId": "huigan-shengjin"
+    },
+    {
+      "id": "product:huigan-shengjin#1",
+      "type": "product",
+      "title": "回甘与生津 · 要点",
+      "sourceId": "huigan-shengjin"
+    },
+    {
+      "id": "product:huigan-shengjin#2",
+      "type": "product",
+      "title": "回甘与生津 · 卖点与人群",
+      "sourceId": "huigan-shengjin"
+    },
+    {
+      "id": "product:huigan-shengjin#3",
+      "type": "product",
+      "title": "回甘与生津 · 避坑",
+      "sourceId": "huigan-shengjin"
+    },
+    {
+      "id": "product:huigan-shengjin#4",
+      "type": "product",
+      "title": "回甘与生津 · 冲泡建议",
+      "sourceId": "huigan-shengjin"
+    },
+    {
+      "id": "product:touchun-erchun#0",
+      "type": "product",
+      "title": "头春/二春 · 概览",
+      "sourceId": "touchun-erchun"
+    },
+    {
+      "id": "product:touchun-erchun#1",
+      "type": "product",
+      "title": "头春/二春 · 要点",
+      "sourceId": "touchun-erchun"
+    },
+    {
+      "id": "product:touchun-erchun#2",
+      "type": "product",
+      "title": "头春/二春 · 卖点与人群",
+      "sourceId": "touchun-erchun"
+    },
+    {
+      "id": "product:touchun-erchun#3",
+      "type": "product",
+      "title": "头春/二春 · 避坑",
+      "sourceId": "touchun-erchun"
+    },
+    {
+      "id": "product:touchun-erchun#4",
+      "type": "product",
+      "title": "头春/二春 · 冲泡建议",
+      "sourceId": "touchun-erchun"
+    },
+    {
+      "id": "product:cuncha-shidu#0",
+      "type": "product",
+      "title": "存茶湿度 · 概览",
+      "sourceId": "cuncha-shidu"
+    },
+    {
+      "id": "product:cuncha-shidu#1",
+      "type": "product",
+      "title": "存茶湿度 · 要点",
+      "sourceId": "cuncha-shidu"
+    },
+    {
+      "id": "product:cuncha-shidu#2",
+      "type": "product",
+      "title": "存茶湿度 · 卖点与人群",
+      "sourceId": "cuncha-shidu"
+    },
+    {
+      "id": "product:cuncha-shidu#3",
+      "type": "product",
+      "title": "存茶湿度 · 避坑",
+      "sourceId": "cuncha-shidu"
+    },
+    {
+      "id": "product:cuncha-shidu#4",
+      "type": "product",
+      "title": "存茶湿度 · 冲泡建议",
+      "sourceId": "cuncha-shidu"
+    },
+    {
+      "id": "product:cangchu#0",
+      "type": "product",
+      "title": "干仓/湿仓/自然仓 · 概览",
+      "sourceId": "cangchu"
+    },
+    {
+      "id": "product:cangchu#1",
+      "type": "product",
+      "title": "干仓/湿仓/自然仓 · 要点",
+      "sourceId": "cangchu"
+    },
+    {
+      "id": "product:cangchu#2",
+      "type": "product",
+      "title": "干仓/湿仓/自然仓 · 卖点与人群",
+      "sourceId": "cangchu"
+    },
+    {
+      "id": "product:cangchu#3",
+      "type": "product",
+      "title": "干仓/湿仓/自然仓 · 避坑",
+      "sourceId": "cangchu"
+    },
+    {
+      "id": "product:cangchu#4",
+      "type": "product",
+      "title": "干仓/湿仓/自然仓 · 冲泡建议",
+      "sourceId": "cangchu"
+    },
+    {
+      "id": "product:shougong-shaqing#0",
+      "type": "product",
+      "title": "手工杀青 · 概览",
+      "sourceId": "shougong-shaqing"
+    },
+    {
+      "id": "product:shougong-shaqing#1",
+      "type": "product",
+      "title": "手工杀青 · 要点",
+      "sourceId": "shougong-shaqing"
+    },
+    {
+      "id": "product:shougong-shaqing#2",
+      "type": "product",
+      "title": "手工杀青 · 卖点与人群",
+      "sourceId": "shougong-shaqing"
+    },
+    {
+      "id": "product:shougong-shaqing#3",
+      "type": "product",
+      "title": "手工杀青 · 避坑",
+      "sourceId": "shougong-shaqing"
+    },
+    {
+      "id": "product:shougong-shaqing#4",
+      "type": "product",
+      "title": "手工杀青 · 冲泡建议",
+      "sourceId": "shougong-shaqing"
+    },
+    {
+      "id": "product:pinpei#0",
+      "type": "product",
+      "title": "拼配 · 概览",
+      "sourceId": "pinpei"
+    },
+    {
+      "id": "product:pinpei#1",
+      "type": "product",
+      "title": "拼配 · 要点",
+      "sourceId": "pinpei"
+    },
+    {
+      "id": "product:pinpei#2",
+      "type": "product",
+      "title": "拼配 · 卖点与人群",
+      "sourceId": "pinpei"
+    },
+    {
+      "id": "product:pinpei#3",
+      "type": "product",
+      "title": "拼配 · 避坑",
+      "sourceId": "pinpei"
+    },
+    {
+      "id": "product:pinpei#4",
+      "type": "product",
+      "title": "拼配 · 冲泡建议",
+      "sourceId": "pinpei"
+    },
+    {
+      "id": "product:guabeixiang#0",
+      "type": "product",
+      "title": "挂杯香 · 概览",
+      "sourceId": "guabeixiang"
+    },
+    {
+      "id": "product:guabeixiang#1",
+      "type": "product",
+      "title": "挂杯香 · 要点",
+      "sourceId": "guabeixiang"
+    },
+    {
+      "id": "product:guabeixiang#2",
+      "type": "product",
+      "title": "挂杯香 · 卖点与人群",
+      "sourceId": "guabeixiang"
+    },
+    {
+      "id": "product:guabeixiang#3",
+      "type": "product",
+      "title": "挂杯香 · 避坑",
+      "sourceId": "guabeixiang"
+    },
+    {
+      "id": "product:guabeixiang#4",
+      "type": "product",
+      "title": "挂杯香 · 冲泡建议",
+      "sourceId": "guabeixiang"
+    },
+    {
+      "id": "product:qiaocha#0",
+      "type": "product",
+      "title": "撬茶 · 概览",
+      "sourceId": "qiaocha"
+    },
+    {
+      "id": "product:qiaocha#1",
+      "type": "product",
+      "title": "撬茶 · 要点",
+      "sourceId": "qiaocha"
+    },
+    {
+      "id": "product:qiaocha#2",
+      "type": "product",
+      "title": "撬茶 · 卖点与人群",
+      "sourceId": "qiaocha"
+    },
+    {
+      "id": "product:qiaocha#3",
+      "type": "product",
+      "title": "撬茶 · 避坑",
+      "sourceId": "qiaocha"
+    },
+    {
+      "id": "product:qiaocha#4",
+      "type": "product",
+      "title": "撬茶 · 冲泡建议",
+      "sourceId": "qiaocha"
+    },
+    {
+      "id": "product:chunqiu-yushui#0",
+      "type": "product",
+      "title": "春茶/秋茶/雨水茶 · 概览",
+      "sourceId": "chunqiu-yushui"
+    },
+    {
+      "id": "product:chunqiu-yushui#1",
+      "type": "product",
+      "title": "春茶/秋茶/雨水茶 · 要点",
+      "sourceId": "chunqiu-yushui"
+    },
+    {
+      "id": "product:chunqiu-yushui#2",
+      "type": "product",
+      "title": "春茶/秋茶/雨水茶 · 卖点与人群",
+      "sourceId": "chunqiu-yushui"
+    },
+    {
+      "id": "product:chunqiu-yushui#3",
+      "type": "product",
+      "title": "春茶/秋茶/雨水茶 · 避坑",
+      "sourceId": "chunqiu-yushui"
+    },
+    {
+      "id": "product:chunqiu-yushui#4",
+      "type": "product",
+      "title": "春茶/秋茶/雨水茶 · 冲泡建议",
+      "sourceId": "chunqiu-yushui"
+    },
+    {
+      "id": "product:shaiqing-maocha#0",
+      "type": "product",
+      "title": "晒青毛茶 · 概览",
+      "sourceId": "shaiqing-maocha"
+    },
+    {
+      "id": "product:shaiqing-maocha#1",
+      "type": "product",
+      "title": "晒青毛茶 · 要点",
+      "sourceId": "shaiqing-maocha"
+    },
+    {
+      "id": "product:shaiqing-maocha#2",
+      "type": "product",
+      "title": "晒青毛茶 · 卖点与人群",
+      "sourceId": "shaiqing-maocha"
+    },
+    {
+      "id": "product:shaiqing-maocha#3",
+      "type": "product",
+      "title": "晒青毛茶 · 避坑",
+      "sourceId": "shaiqing-maocha"
+    },
+    {
+      "id": "product:shaiqing-maocha#4",
+      "type": "product",
+      "title": "晒青毛茶 · 冲泡建议",
+      "sourceId": "shaiqing-maocha"
+    },
+    {
+      "id": "product:tanggans-houdu#0",
+      "type": "product",
+      "title": "汤感厚度 · 概览",
+      "sourceId": "tanggans-houdu"
+    },
+    {
+      "id": "product:tanggans-houdu#1",
+      "type": "product",
+      "title": "汤感厚度 · 要点",
+      "sourceId": "tanggans-houdu"
+    },
+    {
+      "id": "product:tanggans-houdu#2",
+      "type": "product",
+      "title": "汤感厚度 · 卖点与人群",
+      "sourceId": "tanggans-houdu"
+    },
+    {
+      "id": "product:tanggans-houdu#3",
+      "type": "product",
+      "title": "汤感厚度 · 避坑",
+      "sourceId": "tanggans-houdu"
+    },
+    {
+      "id": "product:tanggans-houdu#4",
+      "type": "product",
+      "title": "汤感厚度 · 冲泡建议",
+      "sourceId": "tanggans-houdu"
+    },
+    {
+      "id": "product:wodui#0",
+      "type": "product",
+      "title": "渥堆发酵 · 概览",
+      "sourceId": "wodui"
+    },
+    {
+      "id": "product:wodui#1",
+      "type": "product",
+      "title": "渥堆发酵 · 要点",
+      "sourceId": "wodui"
+    },
+    {
+      "id": "product:wodui#2",
+      "type": "product",
+      "title": "渥堆发酵 · 卖点与人群",
+      "sourceId": "wodui"
+    },
+    {
+      "id": "product:wodui#3",
+      "type": "product",
+      "title": "渥堆发酵 · 避坑",
+      "sourceId": "wodui"
+    },
+    {
+      "id": "product:wodui#4",
+      "type": "product",
+      "title": "渥堆发酵 · 冲泡建议",
+      "sourceId": "wodui"
+    },
+    {
+      "id": "product:shupu#0",
+      "type": "product",
+      "title": "熟普 · 概览",
+      "sourceId": "shupu"
+    },
+    {
+      "id": "product:shupu#1",
+      "type": "product",
+      "title": "熟普 · 要点",
+      "sourceId": "shupu"
+    },
+    {
+      "id": "product:shupu#2",
+      "type": "product",
+      "title": "熟普 · 卖点与人群",
+      "sourceId": "shupu"
+    },
+    {
+      "id": "product:shupu#3",
+      "type": "product",
+      "title": "熟普 · 避坑",
+      "sourceId": "shupu"
+    },
+    {
+      "id": "product:shupu#4",
+      "type": "product",
+      "title": "熟普 · 冲泡建议",
+      "sourceId": "shupu"
+    },
+    {
+      "id": "product:shengpu#0",
+      "type": "product",
+      "title": "生普 · 概览",
+      "sourceId": "shengpu"
+    },
+    {
+      "id": "product:shengpu#1",
+      "type": "product",
+      "title": "生普 · 要点",
+      "sourceId": "shengpu"
+    },
+    {
+      "id": "product:shengpu#2",
+      "type": "product",
+      "title": "生普 · 卖点与人群",
+      "sourceId": "shengpu"
+    },
+    {
+      "id": "product:shengpu#3",
+      "type": "product",
+      "title": "生普 · 避坑",
+      "sourceId": "shengpu"
+    },
+    {
+      "id": "product:shengpu#4",
+      "type": "product",
+      "title": "生普 · 冲泡建议",
+      "sourceId": "shengpu"
+    },
+    {
+      "id": "product:shengshu-qubie#0",
+      "type": "product",
+      "title": "生普熟普区别 · 概览",
+      "sourceId": "shengshu-qubie"
+    },
+    {
+      "id": "product:shengshu-qubie#1",
+      "type": "product",
+      "title": "生普熟普区别 · 要点",
+      "sourceId": "shengshu-qubie"
+    },
+    {
+      "id": "product:shengshu-qubie#2",
+      "type": "product",
+      "title": "生普熟普区别 · 卖点与人群",
+      "sourceId": "shengshu-qubie"
+    },
+    {
+      "id": "product:shengshu-qubie#3",
+      "type": "product",
+      "title": "生普熟普区别 · 避坑",
+      "sourceId": "shengshu-qubie"
+    },
+    {
+      "id": "product:shengshu-qubie#4",
+      "type": "product",
+      "title": "生普熟普区别 · 冲泡建议",
+      "sourceId": "shengshu-qubie"
+    },
+    {
+      "id": "product:baishuang#0",
+      "type": "product",
+      "title": "白霜 · 概览",
+      "sourceId": "baishuang"
+    },
+    {
+      "id": "product:baishuang#1",
+      "type": "product",
+      "title": "白霜 · 要点",
+      "sourceId": "baishuang"
+    },
+    {
+      "id": "product:baishuang#2",
+      "type": "product",
+      "title": "白霜 · 卖点与人群",
+      "sourceId": "baishuang"
+    },
+    {
+      "id": "product:baishuang#3",
+      "type": "product",
+      "title": "白霜 · 避坑",
+      "sourceId": "baishuang"
+    },
+    {
+      "id": "product:baishuang#4",
+      "type": "product",
+      "title": "白霜 · 冲泡建议",
+      "sourceId": "baishuang"
+    },
+    {
+      "id": "product:shimo-yazhi#0",
+      "type": "product",
+      "title": "石磨压制 · 概览",
+      "sourceId": "shimo-yazhi"
+    },
+    {
+      "id": "product:shimo-yazhi#1",
+      "type": "product",
+      "title": "石磨压制 · 要点",
+      "sourceId": "shimo-yazhi"
+    },
+    {
+      "id": "product:shimo-yazhi#2",
+      "type": "product",
+      "title": "石磨压制 · 卖点与人群",
+      "sourceId": "shimo-yazhi"
+    },
+    {
+      "id": "product:shimo-yazhi#3",
+      "type": "product",
+      "title": "石磨压制 · 避坑",
+      "sourceId": "shimo-yazhi"
+    },
+    {
+      "id": "product:shimo-yazhi#4",
+      "type": "product",
+      "title": "石磨压制 · 冲泡建议",
+      "sourceId": "shimo-yazhi"
+    },
+    {
+      "id": "product:suisilvercha#0",
+      "type": "product",
+      "title": "碎银子 · 概览",
+      "sourceId": "suisilvercha"
+    },
+    {
+      "id": "product:suisilvercha#1",
+      "type": "product",
+      "title": "碎银子 · 要点",
+      "sourceId": "suisilvercha"
+    },
+    {
+      "id": "product:suisilvercha#2",
+      "type": "product",
+      "title": "碎银子 · 卖点与人群",
+      "sourceId": "suisilvercha"
+    },
+    {
+      "id": "product:suisilvercha#3",
+      "type": "product",
+      "title": "碎银子 · 避坑",
+      "sourceId": "suisilvercha"
+    },
+    {
+      "id": "product:suisilvercha#4",
+      "type": "product",
+      "title": "碎银子 · 冲泡建议",
+      "sourceId": "suisilvercha"
+    },
+    {
+      "id": "product:jinya-cha-xingtai#0",
+      "type": "product",
+      "title": "紧压茶形态（饼/砖/沱/龙珠） · 概览",
+      "sourceId": "jinya-cha-xingtai"
+    },
+    {
+      "id": "product:jinya-cha-xingtai#1",
+      "type": "product",
+      "title": "紧压茶形态（饼/砖/沱/龙珠） · 要点",
+      "sourceId": "jinya-cha-xingtai"
+    },
+    {
+      "id": "product:jinya-cha-xingtai#2",
+      "type": "product",
+      "title": "紧压茶形态（饼/砖/沱/龙珠） · 卖点与人群",
+      "sourceId": "jinya-cha-xingtai"
+    },
+    {
+      "id": "product:jinya-cha-xingtai#3",
+      "type": "product",
+      "title": "紧压茶形态（饼/砖/沱/龙珠） · 避坑",
+      "sourceId": "jinya-cha-xingtai"
+    },
+    {
+      "id": "product:jinya-cha-xingtai#4",
+      "type": "product",
+      "title": "紧压茶形态（饼/砖/沱/龙珠） · 冲泡建议",
+      "sourceId": "jinya-cha-xingtai"
+    },
+    {
+      "id": "product:chunliao#0",
+      "type": "product",
+      "title": "纯料 · 概览",
+      "sourceId": "chunliao"
+    },
+    {
+      "id": "product:chunliao#1",
+      "type": "product",
+      "title": "纯料 · 要点",
+      "sourceId": "chunliao"
+    },
+    {
+      "id": "product:chunliao#2",
+      "type": "product",
+      "title": "纯料 · 卖点与人群",
+      "sourceId": "chunliao"
+    },
+    {
+      "id": "product:chunliao#3",
+      "type": "product",
+      "title": "纯料 · 避坑",
+      "sourceId": "chunliao"
+    },
+    {
+      "id": "product:chunliao#4",
+      "type": "product",
+      "title": "纯料 · 冲泡建议",
+      "sourceId": "chunliao"
+    },
+    {
+      "id": "product:laocha#0",
+      "type": "product",
+      "title": "老茶 · 概览",
+      "sourceId": "laocha"
+    },
+    {
+      "id": "product:laocha#1",
+      "type": "product",
+      "title": "老茶 · 要点",
+      "sourceId": "laocha"
+    },
+    {
+      "id": "product:laocha#2",
+      "type": "product",
+      "title": "老茶 · 卖点与人群",
+      "sourceId": "laocha"
+    },
+    {
+      "id": "product:laocha#3",
+      "type": "product",
+      "title": "老茶 · 避坑",
+      "sourceId": "laocha"
+    },
+    {
+      "id": "product:laocha#4",
+      "type": "product",
+      "title": "老茶 · 冲泡建议",
+      "sourceId": "laocha"
+    },
+    {
+      "id": "product:laochatou#0",
+      "type": "product",
+      "title": "老茶头 · 概览",
+      "sourceId": "laochatou"
+    },
+    {
+      "id": "product:laochatou#1",
+      "type": "product",
+      "title": "老茶头 · 要点",
+      "sourceId": "laochatou"
+    },
+    {
+      "id": "product:laochatou#2",
+      "type": "product",
+      "title": "老茶头 · 卖点与人群",
+      "sourceId": "laochatou"
+    },
+    {
+      "id": "product:laochatou#3",
+      "type": "product",
+      "title": "老茶头 · 避坑",
+      "sourceId": "laochatou"
+    },
+    {
+      "id": "product:laochatou#4",
+      "type": "product",
+      "title": "老茶头 · 冲泡建议",
+      "sourceId": "laochatou"
+    },
+    {
+      "id": "product:kuse-zhuanhua#0",
+      "type": "product",
+      "title": "苦涩转化 · 概览",
+      "sourceId": "kuse-zhuanhua"
+    },
+    {
+      "id": "product:kuse-zhuanhua#1",
+      "type": "product",
+      "title": "苦涩转化 · 要点",
+      "sourceId": "kuse-zhuanhua"
+    },
+    {
+      "id": "product:kuse-zhuanhua#2",
+      "type": "product",
+      "title": "苦涩转化 · 卖点与人群",
+      "sourceId": "kuse-zhuanhua"
+    },
+    {
+      "id": "product:kuse-zhuanhua#3",
+      "type": "product",
+      "title": "苦涩转化 · 避坑",
+      "sourceId": "kuse-zhuanhua"
+    },
+    {
+      "id": "product:kuse-zhuanhua#4",
+      "type": "product",
+      "title": "苦涩转化 · 冲泡建议",
+      "sourceId": "kuse-zhuanhua"
+    },
+    {
+      "id": "product:chayu-fenbu#0",
+      "type": "product",
+      "title": "茶区分布 · 概览",
+      "sourceId": "chayu-fenbu"
+    },
+    {
+      "id": "product:chayu-fenbu#1",
+      "type": "product",
+      "title": "茶区分布 · 要点",
+      "sourceId": "chayu-fenbu"
+    },
+    {
+      "id": "product:chayu-fenbu#2",
+      "type": "product",
+      "title": "茶区分布 · 卖点与人群",
+      "sourceId": "chayu-fenbu"
+    },
+    {
+      "id": "product:chayu-fenbu#3",
+      "type": "product",
+      "title": "茶区分布 · 避坑",
+      "sourceId": "chayu-fenbu"
+    },
+    {
+      "id": "product:chayu-fenbu#4",
+      "type": "product",
+      "title": "茶区分布 · 冲泡建议",
+      "sourceId": "chayu-fenbu"
+    },
+    {
+      "id": "product:chaqi-tigan#0",
+      "type": "product",
+      "title": "茶气与体感 · 概览",
+      "sourceId": "chaqi-tigan"
+    },
+    {
+      "id": "product:chaqi-tigan#1",
+      "type": "product",
+      "title": "茶气与体感 · 要点",
+      "sourceId": "chaqi-tigan"
+    },
+    {
+      "id": "product:chaqi-tigan#2",
+      "type": "product",
+      "title": "茶气与体感 · 卖点与人群",
+      "sourceId": "chaqi-tigan"
+    },
+    {
+      "id": "product:chaqi-tigan#3",
+      "type": "product",
+      "title": "茶气与体感 · 避坑",
+      "sourceId": "chaqi-tigan"
+    },
+    {
+      "id": "product:chaqi-tigan#4",
+      "type": "product",
+      "title": "茶气与体感 · 冲泡建议",
+      "sourceId": "chaqi-tigan"
+    },
+    {
+      "id": "product:tengtiao-cha#0",
+      "type": "product",
+      "title": "藤条茶 · 概览",
+      "sourceId": "tengtiao-cha"
+    },
+    {
+      "id": "product:tengtiao-cha#1",
+      "type": "product",
+      "title": "藤条茶 · 要点",
+      "sourceId": "tengtiao-cha"
+    },
+    {
+      "id": "product:tengtiao-cha#2",
+      "type": "product",
+      "title": "藤条茶 · 卖点与人群",
+      "sourceId": "tengtiao-cha"
+    },
+    {
+      "id": "product:tengtiao-cha#3",
+      "type": "product",
+      "title": "藤条茶 · 避坑",
+      "sourceId": "tengtiao-cha"
+    },
+    {
+      "id": "product:tengtiao-cha#4",
+      "type": "product",
+      "title": "藤条茶 · 冲泡建议",
+      "sourceId": "tengtiao-cha"
+    },
+    {
+      "id": "product:pangxiejiao#0",
+      "type": "product",
+      "title": "螃蟹脚 · 概览",
+      "sourceId": "pangxiejiao"
+    },
+    {
+      "id": "product:pangxiejiao#1",
+      "type": "product",
+      "title": "螃蟹脚 · 要点",
+      "sourceId": "pangxiejiao"
+    },
+    {
+      "id": "product:pangxiejiao#2",
+      "type": "product",
+      "title": "螃蟹脚 · 卖点与人群",
+      "sourceId": "pangxiejiao"
+    },
+    {
+      "id": "product:pangxiejiao#3",
+      "type": "product",
+      "title": "螃蟹脚 · 避坑",
+      "sourceId": "pangxiejiao"
+    },
+    {
+      "id": "product:pangxiejiao#4",
+      "type": "product",
+      "title": "螃蟹脚 · 冲泡建议",
+      "sourceId": "pangxiejiao"
+    },
+    {
+      "id": "product:xingcha#0",
+      "type": "product",
+      "title": "醒茶 · 概览",
+      "sourceId": "xingcha"
+    },
+    {
+      "id": "product:xingcha#1",
+      "type": "product",
+      "title": "醒茶 · 要点",
+      "sourceId": "xingcha"
+    },
+    {
+      "id": "product:xingcha#2",
+      "type": "product",
+      "title": "醒茶 · 卖点与人群",
+      "sourceId": "xingcha"
+    },
+    {
+      "id": "product:xingcha#3",
+      "type": "product",
+      "title": "醒茶 · 避坑",
+      "sourceId": "xingcha"
+    },
+    {
+      "id": "product:xingcha#4",
+      "type": "product",
+      "title": "醒茶 · 冲泡建议",
+      "sourceId": "xingcha"
+    },
+    {
+      "id": "product:jinhua#0",
+      "type": "product",
+      "title": "金花 · 概览",
+      "sourceId": "jinhua"
+    },
+    {
+      "id": "product:jinhua#1",
+      "type": "product",
+      "title": "金花 · 要点",
+      "sourceId": "jinhua"
+    },
+    {
+      "id": "product:jinhua#2",
+      "type": "product",
+      "title": "金花 · 卖点与人群",
+      "sourceId": "jinhua"
+    },
+    {
+      "id": "product:jinhua#3",
+      "type": "product",
+      "title": "金花 · 避坑",
+      "sourceId": "jinhua"
+    },
+    {
+      "id": "product:jinhua#4",
+      "type": "product",
+      "title": "金花 · 冲泡建议",
+      "sourceId": "jinhua"
+    },
+    {
+      "id": "product:gushu-jianbie#0",
+      "type": "product",
+      "title": "鉴别真假古树 · 概览",
+      "sourceId": "gushu-jianbie"
+    },
+    {
+      "id": "product:gushu-jianbie#1",
+      "type": "product",
+      "title": "鉴别真假古树 · 要点",
+      "sourceId": "gushu-jianbie"
+    },
+    {
+      "id": "product:gushu-jianbie#2",
+      "type": "product",
+      "title": "鉴别真假古树 · 卖点与人群",
+      "sourceId": "gushu-jianbie"
+    },
+    {
+      "id": "product:gushu-jianbie#3",
+      "type": "product",
+      "title": "鉴别真假古树 · 避坑",
+      "sourceId": "gushu-jianbie"
+    },
+    {
+      "id": "product:gushu-jianbie#4",
+      "type": "product",
+      "title": "鉴别真假古树 · 冲泡建议",
+      "sourceId": "gushu-jianbie"
+    },
+    {
+      "id": "topic:ae7krx#0",
+      "type": "topic",
+      "title": "价格体系 · 概览",
+      "sourceId": "ae7krx"
+    },
+    {
+      "id": "topic:ae7krx#1",
+      "type": "topic",
+      "title": "价格体系 · 要点",
+      "sourceId": "ae7krx"
+    },
+    {
+      "id": "topic:ae7krx#2",
+      "type": "topic",
+      "title": "价格体系 · 注意事项",
+      "sourceId": "ae7krx"
+    },
+    {
+      "id": "topic:apk6hz#0",
+      "type": "topic",
+      "title": "前中后段 · 概览",
+      "sourceId": "apk6hz"
+    },
+    {
+      "id": "topic:apk6hz#1",
+      "type": "topic",
+      "title": "前中后段 · 要点",
+      "sourceId": "apk6hz"
+    },
+    {
+      "id": "topic:ifvxuq#0",
+      "type": "topic",
+      "title": "转化方向 · 概览",
+      "sourceId": "ifvxuq"
+    },
+    {
+      "id": "topic:ifvxuq#1",
+      "type": "topic",
+      "title": "转化方向 · 要点（第1段）",
+      "sourceId": "ifvxuq"
+    },
+    {
+      "id": "topic:ifvxuq#2",
+      "type": "topic",
+      "title": "转化方向 · 要点（第2段）",
+      "sourceId": "ifvxuq"
+    },
+    {
+      "id": "topic:ifvxuq#3",
+      "type": "topic",
+      "title": "转化方向 · 注意事项（第1段）",
+      "sourceId": "ifvxuq"
+    },
+    {
+      "id": "topic:ifvxuq#4",
+      "type": "topic",
+      "title": "转化方向 · 注意事项（第2段）",
+      "sourceId": "ifvxuq"
+    },
+    {
+      "id": "topic:msvxl#0",
+      "type": "topic",
+      "title": "风味轮 · 概览",
+      "sourceId": "msvxl"
+    },
+    {
+      "id": "topic:msvxl#1",
+      "type": "topic",
+      "title": "风味轮 · 要点",
+      "sourceId": "msvxl"
+    },
+    {
+      "id": "compliance:absolute#0",
+      "type": "compliance",
+      "title": "绝对化用语 · 风险与整改",
+      "sourceId": "absolute"
+    },
+    {
+      "id": "compliance:absolute#1",
+      "type": "compliance",
+      "title": "绝对化用语 · 禁用词「最好」「最佳」「最强」",
+      "sourceId": "absolute"
+    },
+    {
+      "id": "compliance:absolute#2",
+      "type": "compliance",
+      "title": "绝对化用语 · 禁用词「最便宜」「最正宗」「最先进」",
+      "sourceId": "absolute"
+    },
+    {
+      "id": "compliance:absolute#3",
+      "type": "compliance",
+      "title": "绝对化用语 · 禁用词「第一」「唯一」「独家」",
+      "sourceId": "absolute"
+    },
+    {
+      "id": "compliance:absolute#4",
+      "type": "compliance",
+      "title": "绝对化用语 · 禁用词「顶级」「极品」「国家级」",
+      "sourceId": "absolute"
+    },
+    {
+      "id": "compliance:absolute#5",
+      "type": "compliance",
+      "title": "绝对化用语 · 禁用词「世界级」「国际领先」「绝无仅有」",
+      "sourceId": "absolute"
+    },
+    {
+      "id": "compliance:absolute#6",
+      "type": "compliance",
+      "title": "绝对化用语 · 禁用词「史无前例」「空前绝后」「无与伦比」",
+      "sourceId": "absolute"
+    },
+    {
+      "id": "compliance:absolute#7",
+      "type": "compliance",
+      "title": "绝对化用语 · 禁用词「行业第一」「全国首家」「销量冠军」",
+      "sourceId": "absolute"
+    },
+    {
+      "id": "compliance:absolute#8",
+      "type": "compliance",
+      "title": "绝对化用语 · 禁用词「王牌产品」",
+      "sourceId": "absolute"
+    },
+    {
+      "id": "compliance:medical#0",
+      "type": "compliance",
+      "title": "医疗保健功效 · 风险与整改",
+      "sourceId": "medical"
+    },
+    {
+      "id": "compliance:medical#1",
+      "type": "compliance",
+      "title": "医疗保健功效 · 禁用词「降三高」「降血压」「降血糖」",
+      "sourceId": "medical"
+    },
+    {
+      "id": "compliance:medical#2",
+      "type": "compliance",
+      "title": "医疗保健功效 · 禁用词「降血脂」「抗癌」「防癌」",
+      "sourceId": "medical"
+    },
+    {
+      "id": "compliance:medical#3",
+      "type": "compliance",
+      "title": "医疗保健功效 · 禁用词「抗肿瘤」「治失眠」「养胃」",
+      "sourceId": "medical"
+    },
+    {
+      "id": "compliance:medical#4",
+      "type": "compliance",
+      "title": "医疗保健功效 · 禁用词「护肝」「排毒」「减肥」",
+      "sourceId": "medical"
+    },
+    {
+      "id": "compliance:medical#5",
+      "type": "compliance",
+      "title": "医疗保健功效 · 禁用词「瘦身」「提高免疫力」「增强抵抗力」",
+      "sourceId": "medical"
+    },
+    {
+      "id": "compliance:medical#6",
+      "type": "compliance",
+      "title": "医疗保健功效 · 禁用词「抗衰老」「延缓衰老」「延年益寿」",
+      "sourceId": "medical"
+    },
+    {
+      "id": "compliance:medical#7",
+      "type": "compliance",
+      "title": "医疗保健功效 · 禁用词「祛湿」「清热解毒」「降火」",
+      "sourceId": "medical"
+    },
+    {
+      "id": "compliance:medical#8",
+      "type": "compliance",
+      "title": "医疗保健功效 · 禁用词「消炎杀菌」「助睡眠」「缓解疲劳」",
+      "sourceId": "medical"
+    },
+    {
+      "id": "compliance:medical#9",
+      "type": "compliance",
+      "title": "医疗保健功效 · 禁用词「解酒护肝」",
+      "sourceId": "medical"
+    },
+    {
+      "id": "compliance:promise#0",
+      "type": "compliance",
+      "title": "虚假与夸大承诺 · 风险与整改",
+      "sourceId": "promise"
+    },
+    {
+      "id": "compliance:promise#1",
+      "type": "compliance",
+      "title": "虚假与夸大承诺 · 禁用词「包治」「根治」「药到病除」",
+      "sourceId": "promise"
+    },
+    {
+      "id": "compliance:promise#2",
+      "type": "compliance",
+      "title": "虚假与夸大承诺 · 禁用词「百分百有效」「保证有效」「永不复发」",
+      "sourceId": "promise"
+    },
+    {
+      "id": "compliance:promise#3",
+      "type": "compliance",
+      "title": "虚假与夸大承诺 · 禁用词「无效退款」「一次见效」「立竿见影」",
+      "sourceId": "promise"
+    },
+    {
+      "id": "compliance:promise#4",
+      "type": "compliance",
+      "title": "虚假与夸大承诺 · 禁用词「当天见效」「绝对管用」「保证治好」",
+      "sourceId": "promise"
+    },
+    {
+      "id": "compliance:promise#5",
+      "type": "compliance",
+      "title": "虚假与夸大承诺 · 禁用词「无副作用」「假一赔万」「假一赔十」",
+      "sourceId": "promise"
+    },
+    {
+      "id": "compliance:promise#6",
+      "type": "compliance",
+      "title": "虚假与夸大承诺 · 禁用词「终身质保」「无条件退款」「不满意包退包换」",
+      "sourceId": "promise"
+    },
+    {
+      "id": "compliance:promise#7",
+      "type": "compliance",
+      "title": "虚假与夸大承诺 · 禁用词「权威认证」「专家推荐」",
+      "sourceId": "promise"
+    },
+    {
+      "id": "compliance:superstition#0",
+      "type": "compliance",
+      "title": "迷信风水与运势暗示 · 风险与整改",
+      "sourceId": "superstition"
+    },
+    {
+      "id": "compliance:superstition#1",
+      "type": "compliance",
+      "title": "迷信风水与运势暗示 · 禁用词「招财」「转运」「辟邪」",
+      "sourceId": "superstition"
+    },
+    {
+      "id": "compliance:superstition#2",
+      "type": "compliance",
+      "title": "迷信风水与运势暗示 · 禁用词「镇宅」「开光」「风水」",
+      "sourceId": "superstition"
+    },
+    {
+      "id": "compliance:superstition#3",
+      "type": "compliance",
+      "title": "迷信风水与运势暗示 · 禁用词「旺财」「招财进宝」「化太岁」",
+      "sourceId": "superstition"
+    },
+    {
+      "id": "compliance:superstition#4",
+      "type": "compliance",
+      "title": "迷信风水与运势暗示 · 禁用词「聚财」「保平安」「消灾解厄」",
+      "sourceId": "superstition"
+    },
+    {
+      "id": "compliance:superstition#5",
+      "type": "compliance",
+      "title": "迷信风水与运势暗示 · 禁用词「灵验」「开运」「财神」",
+      "sourceId": "superstition"
+    },
+    {
+      "id": "compliance:superstition#6",
+      "type": "compliance",
+      "title": "迷信风水与运势暗示 · 禁用词「供奉」「求财求子」「本命年必备」",
+      "sourceId": "superstition"
+    },
+    {
+      "id": "compliance:offline#0",
+      "type": "compliance",
+      "title": "诱导私下交易与站外导流 · 风险与整改",
+      "sourceId": "offline"
+    },
+    {
+      "id": "compliance:offline#1",
+      "type": "compliance",
+      "title": "诱导私下交易与站外导流 · 禁用词「加微信」「加V」「加vx」",
+      "sourceId": "offline"
+    },
+    {
+      "id": "compliance:offline#2",
+      "type": "compliance",
+      "title": "诱导私下交易与站外导流 · 禁用词「加我好友」「私聊」「私信我」",
+      "sourceId": "offline"
+    },
+    {
+      "id": "compliance:offline#3",
+      "type": "compliance",
+      "title": "诱导私下交易与站外导流 · 禁用词「站外下单」「加群」「扣1」",
+      "sourceId": "offline"
+    },
+    {
+      "id": "compliance:offline#4",
+      "type": "compliance",
+      "title": "诱导私下交易与站外导流 · 禁用词「扣666」「主页有链接」「私下转账」",
+      "sourceId": "offline"
+    },
+    {
+      "id": "compliance:offline#5",
+      "type": "compliance",
+      "title": "诱导私下交易与站外导流 · 禁用词「微信支付」「支付宝转账」「扫码加我」",
+      "sourceId": "offline"
+    },
+    {
+      "id": "compliance:offline#6",
+      "type": "compliance",
+      "title": "诱导私下交易与站外导流 · 禁用词「二维码」「电话联系」「留个联系方式」",
+      "sourceId": "offline"
+    },
+    {
+      "id": "compliance:offline#7",
+      "type": "compliance",
+      "title": "诱导私下交易与站外导流 · 禁用词「私域」「走线下」「加客服微信」",
+      "sourceId": "offline"
+    },
+    {
+      "id": "compliance:offline#8",
+      "type": "compliance",
+      "title": "诱导私下交易与站外导流 · 禁用词「老地方下单」",
+      "sourceId": "offline"
+    },
+    {
+      "id": "compliance:invest#0",
+      "type": "compliance",
+      "title": "金融投资与升值暗示 · 风险与整改",
+      "sourceId": "invest"
+    },
+    {
+      "id": "compliance:invest#1",
+      "type": "compliance",
+      "title": "金融投资与升值暗示 · 禁用词「升值」「保值」「投资」",
+      "sourceId": "invest"
+    },
+    {
+      "id": "compliance:invest#2",
+      "type": "compliance",
+      "title": "金融投资与升值暗示 · 禁用词「稳赚」「翻倍」「涨价在即」",
+      "sourceId": "invest"
+    },
+    {
+      "id": "compliance:invest#3",
+      "type": "compliance",
+      "title": "金融投资与升值暗示 · 禁用词「收藏必涨」「越存越值钱」「只涨不跌」",
+      "sourceId": "invest"
+    },
+    {
+      "id": "compliance:invest#4",
+      "type": "compliance",
+      "title": "金融投资与升值暗示 · 禁用词「理财产品」「年化收益」「回本」",
+      "sourceId": "invest"
+    },
+    {
+      "id": "compliance:invest#5",
+      "type": "compliance",
+      "title": "金融投资与升值暗示 · 禁用词「升值空间」「传家宝」「金融属性」",
+      "sourceId": "invest"
+    },
+    {
+      "id": "compliance:invest#6",
+      "type": "compliance",
+      "title": "金融投资与升值暗示 · 禁用词「抗通胀」「硬通货」「买到就是赚到」",
+      "sourceId": "invest"
+    },
+    {
+      "id": "compliance:invest#7",
+      "type": "compliance",
+      "title": "金融投资与升值暗示 · 禁用词「财富密码」「稳赚不赔」「以后能卖高价」",
+      "sourceId": "invest"
+    },
+    {
+      "id": "compliance:invest#8",
+      "type": "compliance",
+      "title": "金融投资与升值暗示 · 禁用词「拍卖级藏品」",
+      "sourceId": "invest"
+    },
+    {
+      "id": "compliance:origin#0",
+      "type": "compliance",
+      "title": "虚假产地与年份承诺 · 风险与整改",
+      "sourceId": "origin"
+    },
+    {
+      "id": "compliance:origin#1",
+      "type": "compliance",
+      "title": "虚假产地与年份承诺 · 禁用词「纯料古树」「千年古树」「百年老茶」",
+      "sourceId": "origin"
+    },
+    {
+      "id": "compliance:origin#2",
+      "type": "compliance",
+      "title": "虚假产地与年份承诺 · 禁用词「冰岛古树」「老班章」「正宗原产地」",
+      "sourceId": "origin"
+    },
+    {
+      "id": "compliance:origin#3",
+      "type": "compliance",
+      "title": "虚假产地与年份承诺 · 禁用词「野生古树」「国家地理标志」「明前头采」",
+      "sourceId": "origin"
+    },
+    {
+      "id": "compliance:origin#4",
+      "type": "compliance",
+      "title": "虚假产地与年份承诺 · 禁用词「头春头采」「无农药」「零农残」",
+      "sourceId": "origin"
+    },
+    {
+      "id": "compliance:origin#5",
+      "type": "compliance",
+      "title": "虚假产地与年份承诺 · 禁用词「有机认证」「宫廷级」「贡茶」",
+      "sourceId": "origin"
+    },
+    {
+      "id": "compliance:origin#6",
+      "type": "compliance",
+      "title": "虚假产地与年份承诺 · 禁用词「特供」「专供」「内供」",
+      "sourceId": "origin"
+    },
+    {
+      "id": "compliance:origin#7",
+      "type": "compliance",
+      "title": "虚假产地与年份承诺 · 禁用词「祖传秘方」「原始森林古树」",
+      "sourceId": "origin"
+    },
+    {
+      "id": "compliance:urgency#0",
+      "type": "compliance",
+      "title": "限时逼单与虚假紧迫感 · 风险与整改",
+      "sourceId": "urgency"
+    },
+    {
+      "id": "compliance:urgency#1",
+      "type": "compliance",
+      "title": "限时逼单与虚假紧迫感 · 禁用词「亏本清仓」「最后一天」「卖完不补」",
+      "sourceId": "urgency"
+    },
+    {
+      "id": "compliance:urgency#2",
+      "type": "compliance",
+      "title": "限时逼单与虚假紧迫感 · 禁用词「亏本甩卖」「仅剩三件」「马上涨价」",
+      "sourceId": "urgency"
+    },
+    {
+      "id": "compliance:urgency#3",
+      "type": "compliance",
+      "title": "限时逼单与虚假紧迫感 · 禁用词「错过再等一年」「最后三分钟」「赔钱卖」",
+      "sourceId": "urgency"
+    },
+    {
+      "id": "compliance:urgency#4",
+      "type": "compliance",
+      "title": "限时逼单与虚假紧迫感 · 禁用词「亏钱冲量」「史上最低」「全网最低价」",
+      "sourceId": "urgency"
+    },
+    {
+      "id": "compliance:urgency#5",
+      "type": "compliance",
+      "title": "限时逼单与虚假紧迫感 · 禁用词「不买后悔」「抢不到别怪我」「限时秒杀」",
+      "sourceId": "urgency"
+    },
+    {
+      "id": "compliance:urgency#6",
+      "type": "compliance",
+      "title": "限时逼单与虚假紧迫感 · 禁用词「清仓大甩卖」「今天不定明天没这个价」",
+      "sourceId": "urgency"
+    },
+    {
+      "id": "compliance:platform#0",
+      "type": "compliance",
+      "title": "平台规则专属敏感词 · 风险与整改",
+      "sourceId": "platform"
+    },
+    {
+      "id": "compliance:platform#1",
+      "type": "compliance",
+      "title": "平台规则专属敏感词 · 禁用词「返现」「好评返现」「刷单」",
+      "sourceId": "platform"
+    },
+    {
+      "id": "compliance:platform#2",
+      "type": "compliance",
+      "title": "平台规则专属敏感词 · 禁用词「补单」「空包」「免单」",
+      "sourceId": "platform"
+    },
+    {
+      "id": "compliance:platform#3",
+      "type": "compliance",
+      "title": "平台规则专属敏感词 · 禁用词「白送」「免费送」「0元购」",
+      "sourceId": "platform"
+    },
+    {
+      "id": "compliance:platform#4",
+      "type": "compliance",
+      "title": "平台规则专属敏感词 · 禁用词「零元」「内部价」「员工价」",
+      "sourceId": "platform"
+    },
+    {
+      "id": "compliance:platform#5",
+      "type": "compliance",
+      "title": "平台规则专属敏感词 · 禁用词「渠道价」「微信下单」「点赞抽奖」",
+      "sourceId": "platform"
+    },
+    {
+      "id": "compliance:platform#6",
+      "type": "compliance",
+      "title": "平台规则专属敏感词 · 禁用词「关注领福利」「打擦边球」「别在直播间说」",
+      "sourceId": "platform"
+    },
+    {
+      "id": "compliance:platform#7",
+      "type": "compliance",
+      "title": "平台规则专属敏感词 · 禁用词「小号下单」「秒杀链接」",
+      "sourceId": "platform"
+    },
+    {
+      "id": "compliance:feudal#0",
+      "type": "compliance",
+      "title": "封建迷信内容 · 风险与整改",
+      "sourceId": "feudal"
+    },
+    {
+      "id": "compliance:feudal#1",
+      "type": "compliance",
+      "title": "封建迷信内容 · 禁用词「算命」「看相」「八字」",
+      "sourceId": "feudal"
+    },
+    {
+      "id": "compliance:feudal#2",
+      "type": "compliance",
+      "title": "封建迷信内容 · 禁用词「五行」「改运」「驱邪」",
+      "sourceId": "feudal"
+    },
+    {
+      "id": "compliance:feudal#3",
+      "type": "compliance",
+      "title": "封建迷信内容 · 禁用词「符咒」「阴气」「阳气」",
+      "sourceId": "feudal"
+    },
+    {
+      "id": "compliance:feudal#4",
+      "type": "compliance",
+      "title": "封建迷信内容 · 禁用词「因果报应」「轮回转世」「前世今生」",
+      "sourceId": "feudal"
+    },
+    {
+      "id": "compliance:feudal#5",
+      "type": "compliance",
+      "title": "封建迷信内容 · 禁用词「神灵庇佑」「菩萨保佑」「求神拜佛」",
+      "sourceId": "feudal"
+    },
+    {
+      "id": "compliance:feudal#6",
+      "type": "compliance",
+      "title": "封建迷信内容 · 禁用词「天机不可泄露」「命里注定」「破财」",
+      "sourceId": "feudal"
+    },
+    {
+      "id": "compliance:feudal#7",
+      "type": "compliance",
+      "title": "封建迷信内容 · 禁用词「运势」「灵符」「法事加持」",
+      "sourceId": "feudal"
+    },
+    {
+      "id": "compliance:foodSafety#0",
+      "type": "compliance",
+      "title": "食品添加剂与安全不实宣称 · 风险与整改",
+      "sourceId": "foodSafety"
+    },
+    {
+      "id": "compliance:foodSafety#1",
+      "type": "compliance",
+      "title": "食品添加剂与安全不实宣称 · 禁用词「无添加」「零添加」「纯天然」",
+      "sourceId": "foodSafety"
+    },
+    {
+      "id": "compliance:foodSafety#2",
+      "type": "compliance",
+      "title": "食品添加剂与安全不实宣称 · 禁用词「无农药残留」「绝对安全」「无毒无害」",
+      "sourceId": "foodSafety"
+    },
+    {
+      "id": "compliance:foodSafety#3",
+      "type": "compliance",
+      "title": "食品添加剂与安全不实宣称 · 禁用词「可以随便喝」「孕妇也能喝」「小孩能喝」",
+      "sourceId": "foodSafety"
+    },
+    {
+      "id": "compliance:foodSafety#4",
+      "type": "compliance",
+      "title": "食品添加剂与安全不实宣称 · 禁用词「老人能喝」「糖尿病能喝」「三高人群必喝」",
+      "sourceId": "foodSafety"
+    },
+    {
+      "id": "compliance:foodSafety#5",
+      "type": "compliance",
+      "title": "食品添加剂与安全不实宣称 · 禁用词「减肥期必喝」「治病」「药效」",
+      "sourceId": "foodSafety"
+    },
+    {
+      "id": "compliance:foodSafety#6",
+      "type": "compliance",
+      "title": "食品添加剂与安全不实宣称 · 禁用词「医用级」「药材级」「防辐射」",
+      "sourceId": "foodSafety"
+    },
+    {
+      "id": "compliance:foodSafety#7",
+      "type": "compliance",
+      "title": "食品添加剂与安全不实宣称 · 禁用词「杀幽门螺杆菌」「抗癌物质」「降糖替代药物」",
+      "sourceId": "foodSafety"
+    },
+    {
+      "id": "compliance:comparison#0",
+      "type": "compliance",
+      "title": "贬低同行与不正当比较 · 风险与整改",
+      "sourceId": "comparison"
+    },
+    {
+      "id": "compliance:comparison#1",
+      "type": "compliance",
+      "title": "贬低同行与不正当比较 · 禁用词「吊打同行」「碾压」「别家的都是垃圾」",
+      "sourceId": "comparison"
+    },
+    {
+      "id": "compliance:comparison#2",
+      "type": "compliance",
+      "title": "贬低同行与不正当比较 · 禁用词「劣质茶」「比某大牌好」「市面上都是假的」",
+      "sourceId": "comparison"
+    },
+    {
+      "id": "compliance:comparison#3",
+      "type": "compliance",
+      "title": "贬低同行与不正当比较 · 禁用词「其他家不敢给你看」「全网就我们真」「别人卖的是香精茶」",
+      "sourceId": "comparison"
+    },
+    {
+      "id": "compliance:comparison#4",
+      "type": "compliance",
+      "title": "贬低同行与不正当比较 · 禁用词「同行的茶别买」「比XX便宜一半」「大厂都是智商税」",
+      "sourceId": "comparison"
+    },
+    {
+      "id": "compliance:comparison#5",
+      "type": "compliance",
+      "title": "贬低同行与不正当比较 · 禁用词「只有我家是真古树」「别家都是拼配充纯料」「捡漏别买品牌」",
+      "sourceId": "comparison"
+    },
+    {
+      "id": "compliance:comparison#6",
+      "type": "compliance",
+      "title": "贬低同行与不正当比较 · 禁用词「品牌茶全是翻新茶」",
+      "sourceId": "comparison"
+    },
+    {
+      "id": "compliance:patterns#0",
+      "type": "compliance",
+      "title": "违禁词正则模式 · 正则模式 绝对化数字承诺",
+      "sourceId": "patterns"
+    },
+    {
+      "id": "compliance:patterns#1",
+      "type": "compliance",
+      "title": "违禁词正则模式 · 正则模式 无效退款类保证",
+      "sourceId": "patterns"
+    },
+    {
+      "id": "compliance:patterns#2",
+      "type": "compliance",
+      "title": "违禁词正则模式 · 正则模式 「最」字族极限词",
+      "sourceId": "patterns"
+    },
+    {
+      "id": "compliance:patterns#3",
+      "type": "compliance",
+      "title": "违禁词正则模式 · 正则模式 第一唯一独家类",
+      "sourceId": "patterns"
+    },
+    {
+      "id": "compliance:patterns#4",
+      "type": "compliance",
+      "title": "违禁词正则模式 · 正则模式 联系方式与站外导流",
+      "sourceId": "patterns"
+    },
+    {
+      "id": "compliance:patterns#5",
+      "type": "compliance",
+      "title": "违禁词正则模式 · 正则模式 手机号与座机号",
+      "sourceId": "patterns"
+    },
+    {
+      "id": "compliance:patterns#6",
+      "type": "compliance",
+      "title": "违禁词正则模式 · 正则模式 金额与赠品诱导",
+      "sourceId": "patterns"
+    },
+    {
+      "id": "compliance:patterns#7",
+      "type": "compliance",
+      "title": "违禁词正则模式 · 正则模式 疾病名称连用",
+      "sourceId": "patterns"
+    },
+    {
+      "id": "compliance:patterns#8",
+      "type": "compliance",
+      "title": "违禁词正则模式 · 正则模式 年份与树龄虚标",
+      "sourceId": "patterns"
+    },
+    {
+      "id": "compliance:patterns#9",
+      "type": "compliance",
+      "title": "违禁词正则模式 · 正则模式 全网全国全球类范围宣称",
+      "sourceId": "patterns"
+    },
+    {
+      "id": "compliance:patterns#10",
+      "type": "compliance",
+      "title": "违禁词正则模式 · 正则模式 虚假限时与库存",
+      "sourceId": "patterns"
+    },
+    {
+      "id": "compliance:patterns#11",
+      "type": "compliance",
+      "title": "违禁词正则模式 · 正则模式 医疗动词加症状",
+      "sourceId": "patterns"
+    },
+    {
+      "id": "compliance:patterns#12",
+      "type": "compliance",
+      "title": "违禁词正则模式 · 正则模式 宫廷御用特供类",
+      "sourceId": "patterns"
+    },
+    {
+      "id": "compliance:patterns#13",
+      "type": "compliance",
+      "title": "违禁词正则模式 · 正则模式 投资升值与收益暗示",
+      "sourceId": "patterns"
+    },
+    {
+      "id": "compliance:patterns#14",
+      "type": "compliance",
+      "title": "违禁词正则模式 · 正则模式 迷信与宗教话术",
+      "sourceId": "patterns"
+    },
+    {
+      "id": "compliance:patterns#15",
+      "type": "compliance",
+      "title": "违禁词正则模式 · 正则模式 社交账号ID格式",
+      "sourceId": "patterns"
+    },
+    {
+      "id": "compliance:patterns#16",
+      "type": "compliance",
+      "title": "违禁词正则模式 · 正则模式 贬低同行比较",
+      "sourceId": "patterns"
+    },
+    {
+      "id": "compliance:context-rules#0",
+      "type": "compliance",
+      "title": "违禁词语境规则 · 语境规则 食品功效语境",
+      "sourceId": "context-rules"
+    },
+    {
+      "id": "compliance:context-rules#1",
+      "type": "compliance",
+      "title": "违禁词语境规则 · 语境规则 年份与树龄虚标语境",
+      "sourceId": "context-rules"
+    },
+    {
+      "id": "compliance:context-rules#2",
+      "type": "compliance",
+      "title": "违禁词语境规则 · 语境规则 投资升值与收益语境",
+      "sourceId": "context-rules"
+    },
+    {
+      "id": "compliance:context-rules#3",
+      "type": "compliance",
+      "title": "违禁词语境规则 · 语境规则 医疗建议与特殊人群语境",
+      "sourceId": "context-rules"
+    },
+    {
+      "id": "compliance:context-rules#4",
+      "type": "compliance",
+      "title": "违禁词语境规则 · 语境规则 饮用反馈暗示疗效语境",
+      "sourceId": "context-rules"
+    },
+    {
+      "id": "compliance:context-rules#5",
+      "type": "compliance",
+      "title": "违禁词语境规则 · 语境规则 绝对化排名语境",
+      "sourceId": "context-rules"
+    },
+    {
+      "id": "compliance:context-rules#6",
+      "type": "compliance",
+      "title": "违禁词语境规则 · 语境规则 产地与名山名寨宣称语境",
+      "sourceId": "context-rules"
+    },
+    {
+      "id": "compliance:context-rules#7",
+      "type": "compliance",
+      "title": "违禁词语境规则 · 语境规则 站外交易导流语境",
+      "sourceId": "context-rules"
+    },
+    {
+      "id": "compliance:context-rules#8",
+      "type": "compliance",
+      "title": "违禁词语境规则 · 语境规则 食品安全绝对化语境",
+      "sourceId": "context-rules"
+    },
+    {
+      "id": "compliance:context-rules#9",
+      "type": "compliance",
+      "title": "违禁词语境规则 · 语境规则 虚假稀缺与倒计时语境",
+      "sourceId": "context-rules"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+import { readFileSync } from 'node:fs';
+const s = readFileSync('F:/dsh/直播工作台/ppt-lab/design-demos/B-瑞士国际.html', 'utf8');
+const secs = [...s.matchAll(/<section class="slide[\s\S]*?<\/section>/g)].map((m) => m[0]);
+const cols = new Set();
+for (const sec of secs) for (const m of sec.matchAll(/#[0-9a-fA-F]{3,6}|rgba?\([^)]*\)/g)) cols.add(m[0]);
+console.log('页面代码里的颜色字面量:', [...cols].join(' | '));
+console.log('--accent-bright 被引用次数:', (s.match(/var\(--accent-bright\)/g) || []).length);
+console.log('页面代码 font-weight:', [...new Set(secs.flatMap((x) => [...x.matchAll(/font-weight:(\d+)/g)].map((m) => m[1])))].join(', '));
+console.log('accent 变量在页面代码中出现的次数:', secs.join('').split('var(--accent)').length - 1);
+console.log('HTML 中 --accent 定义:', (s.match(/--accent:#[0-9a-fA-F]+/) || [])[0], '| 其他高亮色(黄/绿/橙)是否出现:', /#FFD500|#C5E803|#FF6B35/i.test(s) ? '有' : '无');

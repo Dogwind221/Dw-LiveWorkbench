@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>方向 C · 定制 ｜ 老班章春茶首发</title>
+<style>
+/* ============================================================
+   方向 C · 顶级定制
+   设计逻辑：书籍设计家杉浦康平（Kohei Sugiura）「脉动的书」的方法
+   —— 书是生命体，信息有方向、有呼吸；黑与白是最少也最有力的两色。
+   现实参照迁移：《全宇宙誌》（松岡正剛 編／杉浦康平 設計，工作舍 1979）
+   —— 黑白基调、反白印制、图表与文字争抢空间但被网格驯服。
+   母题（SPEC 第八节）：因果链 —— 一条自上而下压力渐增的链，最后落进杯子里。
+
+   硬约束：两页各 1920×1080 固定；外壳负责等比缩放 + letterbox + 唯一页码。
+   页面内容里没有任何页码 / 进度标记。
+   ============================================================ */
+
+:root{
+  --font-display: "Noto Serif SC","Source Han Serif SC","Source Han Serif CN","Songti SC","STSong",SimSun,"Microsoft YaHei UI","Microsoft YaHei",serif;
+  --font-sans: "Noto Sans SC","Source Han Sans SC","Microsoft YaHei UI","Microsoft YaHei","PingFang SC","Hiragino Sans GB",sans-serif;
+
+  --paper:  #F2EEE5;   /* 纸面（暖白，非纯白） */
+  --sheet:  #FFFFFF;   /* 纸上的白 */
+  --ink:    #16130F;   /* 正文字 */
+  --ink-2:  #4A4238;   /* 次级字 */
+  --ink-3:  #6F6555;   /* 三级字 / 注释（实测对纸面 5.0:1，过 4.5 底线） */
+  --void:   #14110D;   /* 反白块 */
+
+  --tea:    #7A5210;   /* 汤色·橙黄（深，用于浅底：实测 6.8:1） */
+  --tea-lt: #C1852A;   /* 汤色·橙黄（亮，用于深底） */
+  --tea-pale:#E0A33C;  /* 汤色·浅 */
+  --leaf:   #4E5A45;   /* 叶底·深绿 */
+  --rule:   #D8D2C4;   /* 网格线 */
+  --rule-d: #B0A691;   /* 分隔符 / 结构性标点（大字号，≥3:1） */
+
+  font-synthesis:none;
+  line-break:strict;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+
+html,body{
+  height:100%;
+  background:#0B0A08;
+  font-family:var(--font-sans);
+  overflow:hidden;
+}
+
+/* ---------- 外壳：等比缩放 + letterbox ---------- */
+#viewport{position:fixed; inset:0; display:flex; align-items:center; justify-content:center}
+#deck{
+  position:relative;
+  width:1920px; height:1080px;
+  transform-origin:center center;
+  background:var(--paper);
+  box-shadow:0 24px 90px rgba(0,0,0,.55);
+}
+.slide{
+  position:absolute; inset:0;
+  width:1920px; height:1080px;
+  overflow:hidden;
+  background:var(--paper);
+  display:none;
+}
+.slide.is-active{display:block}
+
+/* 纸纹网格：横 54px、竖 110px，淡到几乎只是一层质感 */
+.grid-lines{
+  position:absolute; inset:0; pointer-events:none;
+  background-image:
+    repeating-linear-gradient(to bottom, rgba(22,19,15,.045) 0 1px, transparent 1px 54px),
+    repeating-linear-gradient(to right,  rgba(22,19,15,.032) 0 1px, transparent 1px 110px);
+}
+
+/* 外壳自己的页码（不在任何一页的内容里） */
+#counter{
+  position:fixed; right:26px; bottom:20px;
+  font-family:var(--font-sans); font-size:14px; letter-spacing:.14em;
+  color:rgba(242,238,229,.5); user-select:none;
+}
+
+/* ---------- 共用排印件 ---------- */
+.kicker{
+  font-family:var(--font-sans); font-size:15px; font-weight:700;
+  letter-spacing:.3em; color:var(--ink-2);
+}
+.kicker--tea{color:var(--tea)}
+.hair{background:var(--rule); border:0}
+
+/* ============================================================
+   P1 · 封面
+   ============================================================ */
+.doc-mark{position:absolute; left:140px; top:96px; display:flex; align-items:center; gap:16px}
+.doc-mark .stamp{width:46px; height:5px; background:var(--tea)}
+.doc-mark .name{font-family:var(--font-display); font-size:20px; font-weight:700; letter-spacing:.04em; color:var(--ink)}
+.doc-mark .issue{font-size:14px; letter-spacing:.2em; color:var(--ink-3)}
+
+/* 年份从右侧出血裁掉，压在留白里当构图重量（不是装饰） */
+.year-crop{
+  position:absolute; left:1080px; top:424px;
+  font-family:var(--font-display); font-size:440px; font-weight:700;
+  line-height:1; letter-spacing:.02em;
+  color:var(--tea); opacity:.075;
+  user-select:none; white-space:nowrap;
+}
+
+/* 饼形与年份的记号：60 等分的压印刻度环 */
+.cake-mark{position:absolute; left:1480px; top:238px; width:300px; height:300px;
+  display:flex; align-items:center; justify-content:center}
+.cake-mark svg{position:absolute; inset:0}
+.cake-mark .yr{font-family:var(--font-display); font-size:58px; font-weight:700; letter-spacing:.03em; color:var(--ink)}
+.cake-mark .wt{position:absolute; left:0; right:0; bottom:-44px; text-align:center;
+  font-size:15px; letter-spacing:.16em; color:var(--ink-3)}
+
+.cover-kicker{position:absolute; left:140px; top:262px}
+.cover-title{
+  position:absolute; left:134px; top:332px;
+  font-family:var(--font-display); font-weight:700;
+  font-size:182px; line-height:1.08; letter-spacing:.055em;
+  color:var(--ink); text-wrap:balance;
+}
+.cover-sub{
+  position:absolute; left:140px; top:770px;
+  display:flex; align-items:baseline; gap:16px;
+  font-family:var(--font-display); font-size:36px; letter-spacing:.055em; color:var(--ink-2);
+}
+.cover-sub .dot{color:var(--ink-3); font-size:24px}
+
+.cover-foot-note{
+  position:absolute; left:140px; top:856px;
+  font-size:20px; line-height:1.7; color:var(--ink-2);
+  max-width:36em; letter-spacing:.01em;
+}
+.cover-foot{position:absolute; left:140px; right:140px; bottom:100px}
+.cover-foot .hair{height:1px; width:100%; margin-bottom:30px}
+.cover-foot .row{display:flex; align-items:baseline; justify-content:space-between}
+.cover-foot .row > *{white-space:nowrap}
+.cover-foot .left{display:flex; align-items:baseline; gap:14px}
+.cover-foot .who{font-size:19px; font-weight:700; letter-spacing:.06em; color:var(--ink)}
+.cover-foot .brand{font-size:17px; letter-spacing:.1em; color:var(--ink-3)}
+.cover-foot .meta{font-size:16px; letter-spacing:.1em; color:var(--ink-3)}
+.cover-foot .sep{color:var(--ink-3); margin:0 10px}
+
+/* ============================================================
+   P2 · 为什么是这个味 —— 条件 → 结果的因果链
+   ============================================================ */
+.p2-kicker{position:absolute; left:140px; top:112px}
+.p2-title{
+  position:absolute; left:134px; top:146px;
+  font-family:var(--font-display); font-weight:700;
+  font-size:96px; line-height:1.16; letter-spacing:.045em; color:var(--ink);
+}
+.p2-attr{
+  position:absolute; left:1490px; top:168px; width:290px; text-align:right;
+  font-size:15px; line-height:1.9; letter-spacing:.04em; color:var(--ink-3);
+}
+
+/* 链条方向：两根支流并成主干的那一行。整行右端对准汇流点 x=840，
+   所以箭头尖端正好指着主干。它不是装饰 icon，是这一页唯一的方向词。 */
+.chain-arrow-cap{
+  position:absolute; left:808px; top:698px; transform:translateX(-50%);
+  font-size:16px; font-weight:700; letter-spacing:.3em; color:var(--ink-2);
+  white-space:nowrap; background:var(--paper); padding:0 14px;
+}
+
+/* 链条三段的分段标签 */
+.stage-label{
+  position:absolute; font-family:var(--font-sans); font-size:15px; font-weight:700;
+  letter-spacing:.28em; color:var(--ink-3);
+}
+
+/* 节点：白纸、直角，页边一根实色书脊。
+   书脊不是「左侧彩色 border 装饰」——它是这条链上粗细不同的三段。 */
+.node{position:absolute; background:var(--sheet); border:1px solid var(--rule)}
+.node .bar{position:absolute; left:0; top:0; bottom:0; width:6px}
+.node .inner{position:absolute; left:6px; top:0; right:0; bottom:0; padding:30px 32px}
+.node .ttl{
+  font-family:var(--font-display); font-weight:700;
+  font-size:30px; letter-spacing:.045em; color:var(--ink);
+}
+.node .desc{margin-top:16px; font-size:20px; line-height:1.82; letter-spacing:.01em; color:var(--ink-2)}
+.node .desc em{font-style:normal; font-weight:700; color:var(--tea)}
+.node .num{position:absolute; left:38px; bottom:22px; font-size:14px; letter-spacing:.2em; color:var(--ink-3)}
+
+/* A · 海拔与温差（链条最细的一段） */
+#nodeA{left:140px; top:330px; width:396px; height:340px}
+#nodeA .bar{background:var(--tea)}
+
+/* 海拔尺：把一个真实区间画成一根有刻度的尺，不是装饰线条 */
+.gauge{margin-top:22px}
+.gauge .scale{position:relative; height:11px}
+.gauge .rail{position:absolute; left:0; right:0; top:9px; height:1px; background:var(--rule-d)}
+.gauge .tick{position:absolute; top:4px; width:1px; height:6px; background:var(--rule-d)}
+.gauge .seg{position:absolute; top:6px; left:36%; width:40%; height:7px; background:var(--tea-pale)}
+.gauge .cap{position:absolute; top:6px; width:1px; height:7px; background:var(--tea)}
+.gauge .ends{display:flex; justify-content:space-between; margin-top:9px;
+  font-size:15px; letter-spacing:.08em; color:var(--ink-3); font-variant-numeric:tabular-nums}
+
+/* B · 土壤与根系 */
+#nodeB{left:604px; top:330px; width:396px; height:340px}
+#nodeB .bar{background:var(--leaf)}
+
+/* M · 树龄与产量：A、B 汇进这里，链条在这里变粗——卡更宽、书脊更宽、带投影 */
+#nodeM{
+  left:140px; top:750px; width:1186px; height:176px;
+  border-color:#B9AF9B; box-shadow:0 10px 34px rgba(22,19,15,.07);
+}
+#nodeM .bar{width:14px; background:var(--tea-lt)}
+#nodeM .inner{left:14px; padding:26px 34px; display:flex; align-items:center; gap:46px}
+#nodeM .ttl{font-size:34px; white-space:nowrap}
+#nodeM .desc{margin-top:0; font-size:20px; width:520px}
+#nodeM .sub{margin-top:0; padding-left:46px; border-left:1px solid var(--rule);
+  font-size:20px; line-height:1.7; color:var(--ink-2)}
+#nodeM .num{left:auto; right:36px; bottom:22px}
+
+/* C · 落到杯子里：反白块，链条落进汤里 */
+#nodeC{left:1370px; top:330px; width:442px; height:420px; background:var(--void); border-color:var(--void)}
+#nodeC .bar{width:14px; background:var(--tea-pale)}
+#nodeC .inner{left:14px; padding:38px 30px 34px 32px}
+#nodeC .ttl{color:#FFFFFF; font-size:28px; letter-spacing:.18em; white-space:nowrap}
+#nodeC .lede{
+  margin-top:26px; font-family:var(--font-display); font-weight:700;
+  font-size:29px; line-height:1.68; letter-spacing:.02em; color:#FFFFFF;
+}
+#nodeC .lede .hi{color:var(--tea-pale)}
+#nodeC .tail{margin-top:18px; font-size:20px; line-height:1.7; color:#E3DBCB}
+#nodeC .num{left:46px; bottom:26px; color:#A79C88}
+
+/* 链条骨架：A、B 两条支流向下汇成一条主干，主干落进 M（变粗），再接到杯子里 */
+#chain-svg{position:absolute; left:140px; top:0; width:1672px; height:1080px; overflow:visible}
+.flow{fill:none; stroke-linecap:round}
+.trib{stroke-width:3.5}
+.trib--a{stroke:var(--tea)}
+.trib--b{stroke:var(--leaf)}
+.trunk{stroke:var(--tea-lt); stroke-width:12}
+.pass{stroke:var(--tea-lt); stroke-width:9}
+
+/* 链条基线：一条横贯全页的极细虚线，所有节点都挂在它上面 */
+.chain-axis{position:absolute; left:140px; right:140px; top:990px; height:1px; border-top:1px dashed var(--rule-d)}
+.chain-note{
+  position:absolute; left:140px; top:1008px;
+  font-size:20px; letter-spacing:.01em; color:var(--ink-2);
+}
+.chain-note b{font-family:var(--font-display); font-weight:700; color:var(--ink)}
+</style>
+</head>
+<body>
+
+<div id="viewport">
+  <div id="deck">
+
+    <!-- ==================== P1 · 封面 ==================== -->
+    <section class="slide is-active" id="p1" data-screen-label="P1 封面">
+      <div class="grid-lines"></div>
+
+      <div class="year-crop" aria-hidden="true">2026</div>
+
+      <div class="doc-mark">
+        <span class="stamp"></span>
+        <span class="name">山外山茶事</span>
+        <span class="issue">SHAN WAI SHAN · PUER</span>
+      </div>
+
+      <div class="cake-mark" aria-hidden="true">
+        <svg viewBox="0 0 300 300" width="300" height="300">
+          <circle cx="150" cy="150" r="146" fill="none" stroke="#D8D2C4" stroke-width="10"
+                  stroke-dasharray="2.2 13.09" transform="rotate(-90 150 150)"/>
+          <circle cx="150" cy="150" r="126" fill="none" stroke="#C1852A" stroke-width="1.5"/>
+          <circle cx="150" cy="150" r="96" fill="none" stroke="#E0A33C" stroke-width="1"/>
+        </svg>
+        <div class="yr">2026</div>
+        <div class="wt">357g / 饼</div>
+      </div>
+
+      <div class="cover-kicker kicker kicker--tea">新品首发</div>
+
+      <h1 class="cover-title">老班章<br>春茶首发</h1>
+
+      <p class="cover-sub">
+        <span>老班章</span><span class="dot">·</span>
+        <span>生普</span><span class="dot">·</span>
+        <span>2026</span><span class="dot">·</span>
+        <span>357g/饼</span>
+      </p>
+
+      <p class="cover-foot-note">
+        海拔 1700 - 1900 m（参考区间），一芽两叶，<br>
+        这一场把它凭什么卖这个价讲清楚。
+      </p>
+
+      <div class="cover-foot">
+        <div class="hair"></div>
+        <div class="row">
+          <div class="left">
+            <span class="who">主讲：阿茶</span>
+            <span class="sep">/</span>
+            <span class="brand">山外山茶事</span>
+          </div>
+          <div class="meta">2026-10-15<span class="sep">/</span>约 30 分钟</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ P2 · 为什么是这个味（条件 → 结果） ============ -->
+    <section class="slide" id="p2" data-screen-label="P2 为什么是这个味">
+      <div class="grid-lines"></div>
+
+      <div class="p2-kicker kicker kicker--tea">山场逻辑</div>
+      <h2 class="p2-title">为什么是这个味</h2>
+      <div class="p2-attr">山外山茶事 · 老班章<br>山场档案 01</div>
+
+      <div class="chain-arrow-cap">条件 → 机制 → 结果</div>
+
+      <!-- 链条骨架：两条支流汇成一条主干，主干穿过 M，再落进杯子 -->
+      <svg id="chain-svg" viewBox="0 0 1672 1080" aria-hidden="true">
+        <!-- A 海拔与温差：落下 → 汇向主干轴线 x=840 -->
+        <path class="flow trib trib--a" d="M338 700 C 338 736, 570 762, 826 756"/>
+        <!-- B 土壤与根系：落下 → 同样汇向 x=840 -->
+        <path class="flow trib trib--b" d="M802 700 C 802 736, 1110 762, 854 756"/>
+        <!-- 主干：两根支流并成一条更粗的线，落进 M（M 顶边 750，末段被 M 盖住） -->
+        <path class="flow trunk" d="M840 750 L 840 752"/>
+        <!-- M 之后交给杯子：中心线 y=840，从 M 右边 1326 出来，接 C 左边 1370 -->
+        <path class="flow pass" d="M1316 840 L 1370 840"/>
+      </svg>
+
+      <div class="stage-label" style="left:140px; top:296px">条 件 · A / B</div>
+      <div class="stage-label" style="left:140px; top:700px; color:var(--tea)">机 制 · M</div>
+      <div class="stage-label" style="left:1370px; top:296px">结 果 · C</div>
+
+      <!-- A -->
+      <div class="node" id="nodeA">
+        <div class="bar"></div>
+        <div class="inner">
+          <div class="ttl">海拔与温差</div>
+          <div class="desc">
+            海拔 <em>1700 - 1900 m</em>（参考区间），昼夜温差大，芽叶长得慢，内含物质积累更充分。
+          </div>
+          <div class="gauge">
+            <div class="scale">
+              <div class="rail"></div>
+              <div class="tick" style="left:0"></div>
+              <div class="tick" style="left:20%"></div>
+              <div class="tick" style="left:40%"></div>
+              <div class="tick" style="left:60%"></div>
+              <div class="tick" style="left:80%"></div>
+              <div class="tick" style="left:100%"></div>
+              <div class="seg"></div>
+              <div class="cap" style="left:36%"></div>
+              <div class="cap" style="left:76%"></div>
+            </div>
+            <div class="ends"><span>1700 m</span><span>1900 m</span></div>
+          </div>
+          <div class="num">A / 条件</div>
+        </div>
+      </div>
+
+      <!-- B -->
+      <div class="node" id="nodeB">
+        <div class="bar"></div>
+        <div class="inner">
+          <div class="ttl">土壤与根系</div>
+          <div class="desc">
+            红壤夹风化砂岩碎石，土层偏薄、排水快。
+          </div>
+          <div class="num">B / 条件</div>
+        </div>
+      </div>
+
+      <!-- C -->
+      <div class="node" id="nodeC">
+        <div class="bar"></div>
+        <div class="inner">
+          <div class="ttl">落到杯子里</div>
+          <div class="lede">
+            喝起来就是苦底明显但化得快、<br>
+            回甘强、茶气足、汤感厚，
+          </div>
+          <div class="tail">香气偏兰香。</div>
+          <div class="num">C / 结果</div>
+        </div>
+      </div>
+
+      <!-- M：A、B 汇进这里，链条在这里变粗 -->
+      <div class="node" id="nodeM">
+        <div class="bar"></div>
+        <div class="inner">
+          <div class="ttl">树龄与产量</div>
+          <div class="desc">古树主体约 <em>200 - 400 年</em>，另有小树、大树混生。</div>
+          <div class="sub">单株产量低，<br>一芽两叶的采摘窗口短。</div>
+          <div class="num">M / 机制</div>
+        </div>
+      </div>
+
+      <div class="chain-axis"></div>
+      <p class="chain-note">
+        海拔与土壤是「因」，树龄与产量是「缘」，杯子里的味道是「果」——<b>同一条链，从山场一直落到汤里。</b>
+      </p>
+    </section>
+
+  </div>
+</div>
+
+<div id="counter">01 / 02</div>
+
+<script>
+(function(){
+  var DESIGN_W = 1920, DESIGN_H = 1080;
+  var deck = document.getElementById('deck');
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var counter = document.getElementById('counter');
+  var current = 0;
+
+  /* 等比缩放 + letterbox。版式全用 1920×1080 的绝对坐标写，
+     外屏只改变换，不改排版。 */
+  function fit(){
+    var s = Math.min(window.innerWidth / DESIGN_W, window.innerHeight / DESIGN_H);
+    deck.style.transform = 'scale(' + s + ')';
+  }
+  window.addEventListener('resize', fit);
+  fit();
+
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
+
+  function render(){
+    slides.forEach(function(el, i){ el.classList.toggle('is-active', i === current); });
+    counter.textContent = pad(current + 1) + ' / ' + pad(slides.length);
+  }
+  function go(i){
+    current = Math.max(0, Math.min(slides.length - 1, i));
+    render();
+  }
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ' || e.key === 'PageDown') {
+      e.preventDefault(); go(current + 1);
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp' || e.key === 'PageUp') {
+      e.preventDefault(); go(current - 1);
+    } else if (e.key === 'Home') { e.preventDefault(); go(0); }
+    else if (e.key === 'End') { e.preventDefault(); go(slides.length - 1); }
+  });
+
+  /* 点右半区 / 左半区翻页，方便直播时鼠标或触摸切页 */
+  document.getElementById('viewport').addEventListener('click', function(e){
+    go(current + (e.clientX > window.innerWidth / 2 ? 1 : -1));
+  });
+
+  var hash = parseInt((location.hash || '').replace('#p', ''), 10);
+  go(isNaN(hash) ? 0 : hash - 1);
+})();
+</script>
+</body>
+</html>

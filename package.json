@@ -1,0 +1,39 @@
+{
+  "name": "puer-live-workbench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "普洱茶直播工作台 —— 情报采集 / 知识库 / PPT+口播稿生成 / 提词器 / 合规检查 / 复盘切片",
+  "main": "server/index.mjs",
+  "scripts": {
+    "start": "node server/index.mjs",
+    "dev": "node --watch server/index.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "smoke:api": "node scripts/api-smoke.mjs",
+    "smoke:mount": "node scripts/mount-smoke.mjs",
+    "smoke:plugin": "node scripts/plugin-smoke.mjs",
+    "smoke:all": "node scripts/smoke.mjs && node scripts/mount-smoke.mjs && node scripts/plugin-smoke.mjs",
+    "smoke:rag": "node scripts/rag-smoke.mjs",
+    "smoke:agent": "node scripts/agent-smoke.mjs",
+    "smoke:tenant": "node scripts/tenant-smoke.mjs",
+    "smoke:auth": "node scripts/auth-smoke.mjs",
+    "smoke:rbac": "node scripts/rbac-smoke.mjs",
+    "smoke:quota": "node scripts/quota-smoke.mjs",
+    "smoke:auth-ui": "node scripts/auth-ui-smoke.mjs",
+    "smoke:batch": "node scripts/batch-variant-smoke.mjs",
+    "check:docs": "node scripts/docs-consistency.mjs",
+    "probe:rag": "node scripts/rag-probe.mjs",
+    "eval:rag": "node scripts/rag-eval.mjs --offline",
+    "eval:agent": "node scripts/agent-eval.mjs --offline",
+    "smoke:multitenant": "node scripts/tenant-smoke.mjs && node scripts/auth-smoke.mjs && node scripts/rbac-smoke.mjs && node scripts/quota-smoke.mjs && node scripts/auth-ui-smoke.mjs",
+    "smoke:all2": "node scripts/smoke.mjs && node scripts/rag-smoke.mjs && node scripts/agent-smoke.mjs && node scripts/batch-variant-smoke.mjs",
+    "quota:report": "node scripts/quota-report.mjs",
+    "user:create": "node scripts/create-user.mjs",
+    "token:create": "node scripts/create-token.mjs",
+    "migrate:tenant": "node scripts/migrate-to-multi-tenant.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {}
+}

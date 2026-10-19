@@ -1,0 +1,698 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "c01",
+      "question": "老班章到底在哪个产区，海拔大概多少？",
+      "expectChunkIds": [
+        "mountain:laobanzhang#0"
+      ],
+      "expectTypes": [
+        "mountain"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "1700 - 1900"
+    },
+    {
+      "id": "c02",
+      "question": "冰岛老寨的茶喝起来是什么味道？",
+      "expectChunkIds": [
+        "mountain:bingdao#1",
+        "mountain:bingdao#3"
+      ],
+      "expectTypes": [
+        "mountain"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "冰糖"
+    },
+    {
+      "id": "c03",
+      "question": "老班章和布朗山其他寨子的茶，到底差在哪？",
+      "expectChunkIds": [
+        "mountain:laobanzhang#0",
+        "mountain:bulangshan#0"
+      ],
+      "expectTypes": [
+        "mountain"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "风格谱系"
+    },
+    {
+      "id": "c04",
+      "question": "冰岛五寨里的南迫和坝歪，风格上有什么区别？",
+      "expectChunkIds": [
+        "mountain:bingdao-nanpo#0",
+        "mountain:bingdao-bawai#0"
+      ],
+      "expectTypes": [
+        "mountain"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "冰糖甜的基础"
+    },
+    {
+      "id": "c05",
+      "question": "昔归海拔才七八百米，为什么还能卖到这么贵？",
+      "expectChunkIds": [
+        "mountain:xigui#0",
+        "mountain:xigui#2"
+      ],
+      "expectTypes": [
+        "mountain"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "江雾"
+    },
+    {
+      "id": "c06",
+      "question": "老曼峨苦底那么重，为什么还有那么多人抢着买？",
+      "expectChunkIds": [
+        "mountain:laomane#0",
+        "mountain:laomane#1"
+      ],
+      "expectTypes": [
+        "mountain"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "苦茶类型比例高"
+    },
+    {
+      "id": "c07",
+      "question": "薄荷塘冲泡水温要多少，投茶几克？",
+      "expectChunkIds": [
+        "mountain:bohetang#4"
+      ],
+      "expectTypes": [
+        "mountain"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "90 - 95℃"
+    },
+    {
+      "id": "c08",
+      "question": "曼松现在大概什么价位？",
+      "expectChunkIds": [
+        "mountain:mansong#2"
+      ],
+      "expectTypes": [
+        "mountain"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "2万 - 8万"
+    },
+    {
+      "id": "c09",
+      "question": "易武的麻黑和落水洞，风格差在哪？",
+      "expectChunkIds": [
+        "mountain:mahei#0",
+        "mountain:luoshuidong#0"
+      ],
+      "expectTypes": [
+        "mountain"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "易武"
+    },
+    {
+      "id": "c10",
+      "question": "直播间卖低价「班章」，常见的坑有哪些？",
+      "expectChunkIds": [
+        "mountain:laobanzhang#2"
+      ],
+      "expectTypes": [
+        "mountain"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "市面低价"
+    },
+    {
+      "id": "c11",
+      "question": "大雪山海拔多高？跟邦东大雪山是一回事吗？",
+      "expectChunkIds": [
+        "mountain:daxueshan#0",
+        "mountain:daxueshan#2"
+      ],
+      "expectTypes": [
+        "mountain"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "1800 - 2600"
+    },
+    {
+      "id": "c12",
+      "question": "南糯山和布朗山风格差多远？",
+      "expectChunkIds": [
+        "mountain:nannuoshan#1",
+        "mountain:bulangshan#1"
+      ],
+      "expectTypes": [
+        "mountain"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "浓强"
+    },
+    {
+      "id": "c13",
+      "question": "倚邦适合推荐给什么样的客人？",
+      "expectChunkIds": [
+        "mountain:yibang#3"
+      ],
+      "expectTypes": [
+        "mountain"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "适合人群：老茶客"
+    },
+    {
+      "id": "c14",
+      "question": "刮风寨那个森林野韵是怎么喝出来的？",
+      "expectChunkIds": [
+        "mountain:guafengzhai#1",
+        "mountain:guafengzhai#0"
+      ],
+      "expectTypes": [
+        "mountain"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "森林野韵"
+    },
+    {
+      "id": "c15",
+      "question": "生普和熟普到底有什么区别？",
+      "expectChunkIds": [
+        "product:shengshu-qubie#0",
+        "product:shengshu-qubie#1"
+      ],
+      "expectTypes": [
+        "product"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "渥堆"
+    },
+    {
+      "id": "c16",
+      "question": "熟茶为什么一定要渥堆发酵？",
+      "expectChunkIds": [
+        "product:wodui#0",
+        "product:wodui#1"
+      ],
+      "expectTypes": [
+        "product"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "微生物与湿热"
+    },
+    {
+      "id": "c17",
+      "question": "泡生普水温多少合适？",
+      "expectChunkIds": [
+        "product:chongpao-shuiwen#1",
+        "product:chongpao-shuiwen#4"
+      ],
+      "expectTypes": [
+        "product"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "95 - 100℃"
+    },
+    {
+      "id": "c18",
+      "question": "家里存茶湿度要控制在多少？",
+      "expectChunkIds": [
+        "product:cuncha-shidu#1",
+        "product:cuncha-shidu#4",
+        "product:cuncha-shidu#2"
+      ],
+      "expectTypes": [
+        "product"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "60%-70%"
+    },
+    {
+      "id": "c19",
+      "question": "干仓和湿仓有什么区别？",
+      "expectChunkIds": [
+        "product:cangchu#0",
+        "product:cangchu#1"
+      ],
+      "expectTypes": [
+        "product"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "湿仓"
+    },
+    {
+      "id": "c20",
+      "question": "古树、大树、小树到底怎么分？",
+      "expectChunkIds": [
+        "product:gushu-dashu-xiaoshu#1"
+      ],
+      "expectTypes": [
+        "product"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "百年以上"
+    },
+    {
+      "id": "c21",
+      "question": "为什么同一个山头的茶，价格能差好几倍？",
+      "expectChunkIds": [
+        "topic:ae7krx#1"
+      ],
+      "expectTypes": [
+        "topic"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "差几倍"
+    },
+    {
+      "id": "c22",
+      "question": "碎银子是什么茶，靠不靠谱？",
+      "expectChunkIds": [
+        "product:suisilvercha#0",
+        "product:suisilvercha#3"
+      ],
+      "expectTypes": [
+        "product"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "碎银子"
+    },
+    {
+      "id": "c23",
+      "question": "号级、印级、七子饼分别是什么意思？",
+      "expectChunkIds": [
+        "product:haoji-yinji-qizi#0",
+        "product:haoji-yinji-qizi#1"
+      ],
+      "expectTypes": [
+        "product"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "七子饼"
+    },
+    {
+      "id": "c24",
+      "question": "茶上的白霜和发霉怎么区分？",
+      "expectChunkIds": [
+        "product:baishuang#0",
+        "product:baishuang#1"
+      ],
+      "expectTypes": [
+        "product"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "结晶"
+    },
+    {
+      "id": "c25",
+      "question": "头春和二春差在哪，价格差多少？",
+      "expectChunkIds": [
+        "product:touchun-erchun#0",
+        "product:touchun-erchun#1"
+      ],
+      "expectTypes": [
+        "product"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "二春"
+    },
+    {
+      "id": "c26",
+      "question": "藤条茶是怎么养出来的？",
+      "expectChunkIds": [
+        "product:tengtiao-cha#0",
+        "product:tengtiao-cha#1"
+      ],
+      "expectTypes": [
+        "product"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "留顶养标"
+    },
+    {
+      "id": "c27",
+      "question": "什么是纯料？纯料和拼配哪个好？",
+      "expectChunkIds": [
+        "product:chunliao#0",
+        "product:pinpei#0"
+      ],
+      "expectTypes": [
+        "product"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "拼配"
+    },
+    {
+      "id": "c28",
+      "question": "我在直播间能不能说「这是今年最好的老班章」？",
+      "expectChunkIds": [
+        "compliance:absolute#0",
+        "compliance:absolute#1",
+        "compliance:patterns#2"
+      ],
+      "expectTypes": [
+        "compliance"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "最好"
+    },
+    {
+      "id": "c29",
+      "question": "能不能讲这个茶能降三高、养胃？",
+      "expectChunkIds": [
+        "compliance:medical#0",
+        "compliance:medical#1",
+        "compliance:medical#3"
+      ],
+      "expectTypes": [
+        "compliance"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "降三高"
+    },
+    {
+      "id": "c30",
+      "question": "能不能让粉丝加我微信下单？",
+      "expectChunkIds": [
+        "compliance:offline#1",
+        "compliance:offline#2",
+        "compliance:offline#5"
+      ],
+      "expectTypes": [
+        "compliance"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "加微信"
+    },
+    {
+      "id": "c31",
+      "question": "能不能说这个茶存着会升值，是投资？",
+      "expectChunkIds": [
+        "compliance:invest#0",
+        "compliance:invest#1"
+      ],
+      "expectTypes": [
+        "compliance"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "升值"
+    },
+    {
+      "id": "c32",
+      "question": "能不能承诺「无效退款、假一赔十」？",
+      "expectChunkIds": [
+        "compliance:promise#3",
+        "compliance:promise#5",
+        "compliance:patterns#1"
+      ],
+      "expectTypes": [
+        "compliance"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "假一赔十"
+    },
+    {
+      "id": "c33",
+      "question": "能不能说「最后一天，卖完不补」？",
+      "expectChunkIds": [
+        "compliance:urgency#0",
+        "compliance:urgency#1",
+        "compliance:patterns#10"
+      ],
+      "expectTypes": [
+        "compliance"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "卖完不补"
+    },
+    {
+      "id": "c34",
+      "question": "能不能说我们的茶零添加、纯天然、无农残？",
+      "expectChunkIds": [
+        "compliance:foodSafety#0",
+        "compliance:foodSafety#1",
+        "compliance:foodSafety#2"
+      ],
+      "expectTypes": [
+        "compliance"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "纯天然"
+    },
+    {
+      "id": "c35",
+      "question": "能不能说这批茶开过光，能招财转运？",
+      "expectChunkIds": [
+        "compliance:superstition#0",
+        "compliance:superstition#1",
+        "compliance:superstition#2"
+      ],
+      "expectTypes": [
+        "compliance"
+      ],
+      "shouldRefuse": false,
+      "style": "colloquial",
+      "expectText": "开光"
+    },
+    {
+      "id": "c36",
+      "question": "紫砂壶平时怎么养？用不用天天擦？",
+      "expectChunkIds": [],
+      "expectTypes": [],
+      "shouldRefuse": true,
+      "style": "colloquial",
+      "expectText": ""
+    },
+    {
+      "id": "c37",
+      "question": "铁观音的做青工艺跟普洱差在哪？",
+      "expectChunkIds": [],
+      "expectTypes": [],
+      "shouldRefuse": true,
+      "style": "colloquial",
+      "expectText": ""
+    },
+    {
+      "id": "c38",
+      "question": "大红袍的岩韵怎么跟客人描述？",
+      "expectChunkIds": [],
+      "expectTypes": [],
+      "shouldRefuse": true,
+      "style": "colloquial",
+      "expectText": ""
+    },
+    {
+      "id": "c39",
+      "question": "普洱茶的咖啡因含量大概多少？晚上喝了会不会睡不着？",
+      "expectChunkIds": [],
+      "expectTypes": [],
+      "shouldRefuse": true,
+      "style": "colloquial",
+      "expectText": ""
+    },
+    {
+      "id": "c40",
+      "question": "台湾高山茶的茶园一般在多高的海拔？",
+      "expectChunkIds": [],
+      "expectTypes": [],
+      "shouldRefuse": true,
+      "style": "colloquial",
+      "expectText": ""
+    },
+    {
+      "id": "c41",
+      "question": "我们卖台湾茶要不要交关税？直播间能讲这个吗？",
+      "expectChunkIds": [],
+      "expectTypes": [],
+      "shouldRefuse": true,
+      "style": "colloquial",
+      "expectText": ""
+    },
+    {
+      "id": "c42",
+      "question": "老班章 海拔 产区",
+      "expectChunkIds": [
+        "mountain:laobanzhang#0"
+      ],
+      "expectTypes": [
+        "mountain"
+      ],
+      "shouldRefuse": false,
+      "style": "keyword",
+      "expectText": "1700 - 1900"
+    },
+    {
+      "id": "c43",
+      "question": "南迫 坝歪 风格 区别",
+      "expectChunkIds": [
+        "mountain:bingdao-nanpo#0",
+        "mountain:bingdao-bawai#0"
+      ],
+      "expectTypes": [
+        "mountain"
+      ],
+      "shouldRefuse": false,
+      "style": "keyword",
+      "expectText": "冰糖甜的基础"
+    },
+    {
+      "id": "c44",
+      "question": "曼松 价格 参考区间",
+      "expectChunkIds": [
+        "mountain:mansong#2"
+      ],
+      "expectTypes": [
+        "mountain"
+      ],
+      "shouldRefuse": false,
+      "style": "keyword",
+      "expectText": "2万 - 8万"
+    },
+    {
+      "id": "c45",
+      "question": "老白茶能不能煮着喝，跟普洱的煮法一样吗？",
+      "expectChunkIds": [],
+      "expectTypes": [],
+      "shouldRefuse": true,
+      "style": "colloquial",
+      "expectText": ""
+    },
+    {
+      "id": "c46",
+      "question": "你们这个茶包邮吗，一般发什么快递？",
+      "expectChunkIds": [],
+      "expectTypes": [],
+      "shouldRefuse": true,
+      "style": "colloquial",
+      "expectText": ""
+    },
+    {
+      "id": "c47",
+      "question": "普洱能不能加奶加蜂蜜，做成奶茶那样喝？",
+      "expectChunkIds": [],
+      "expectTypes": [],
+      "shouldRefuse": true,
+      "style": "colloquial",
+      "expectText": ""
+    },
+    {
+      "id": "c48",
+      "question": "普洱茶的茶多酚含量大概多少？",
+      "expectChunkIds": [],
+      "expectTypes": [],
+      "shouldRefuse": true,
+      "style": "colloquial",
+      "expectText": ""
+    },
+    {
+      "id": "c49",
+      "question": "碧螺春 云南 产地",
+      "expectChunkIds": [],
+      "expectTypes": [],
+      "shouldRefuse": true,
+      "style": "keyword",
+      "expectText": ""
+    },
+    {
+      "id": "c50",
+      "question": "普洱茶有保质期吗，过期了还能不能喝？",
+      "expectChunkIds": [],
+      "expectTypes": [],
+      "shouldRefuse": true,
+      "style": "colloquial",
+      "expectText": ""
+    },
+    {
+      "id": "c51",
+      "question": "你们茶园在哪个村，粉丝能去参观吗？",
+      "expectChunkIds": [],
+      "expectTypes": [],
+      "shouldRefuse": true,
+      "style": "colloquial",
+      "expectText": ""
+    },
+    {
+      "id": "c52",
+      "question": "生普能不能装在保温杯里带着喝一整天？",
+      "expectChunkIds": [],
+      "expectTypes": [],
+      "shouldRefuse": true,
+      "style": "colloquial",
+      "expectText": ""
+    },
+    {
+      "id": "c53",
+      "question": "茶饼上印的那种唛号是什么意思？",
+      "expectChunkIds": [],
+      "expectTypes": [],
+      "shouldRefuse": true,
+      "style": "colloquial",
+      "expectText": ""
+    },
+    {
+      "id": "c54",
+      "question": "泡普洱用自来水行不行，非得买矿泉水吗？",
+      "expectChunkIds": [],
+      "expectTypes": [],
+      "shouldRefuse": true,
+      "style": "colloquial",
+      "expectText": ""
+    },
+    {
+      "id": "c55",
+      "question": "六堡茶跟普洱熟茶有什么区别？",
+      "expectChunkIds": [],
+      "expectTypes": [],
+      "shouldRefuse": true,
+      "style": "colloquial",
+      "expectText": ""
+    },
+    {
+      "id": "c56",
+      "question": "你们能开发票吗，直播间下单怎么开？",
+      "expectChunkIds": [],
+      "expectTypes": [],
+      "shouldRefuse": true,
+      "style": "colloquial",
+      "expectText": ""
+    }
+  ]
+}
