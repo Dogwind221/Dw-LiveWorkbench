@@ -28,7 +28,11 @@ export function loadKB() {
 }
 
 export function saveKB(kb) {
-  kb.updatedAt = new Date().toISOString().slice(0, 10);
+  // 用完整时间戳，不要只写日期。
+  // 索引缓存靠这个字段判断要不要重建；只写 `YYYY-MM-DD` 的话，
+  // 同一天内的第二次编辑签名不变 → 索引不重建 → RAG 继续拿旧数据回答。
+  // （kb-file.mjs 的导入路径本来就是完整时间戳，这里改成一致。）
+  kb.updatedAt = new Date().toISOString();
   writeJson(FILE, kb);
   return kb;
 }
