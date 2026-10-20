@@ -1,13 +1,13 @@
-# 模块 8：Agent 编排 + Function Calling
+# 模块 4：Agent 编排 + Function Calling
 
 > 这一章记录的是**为什么这么做**。代码在 `server/lib/agent/`，
 > 接口契约在 [`AGENT-INTERFACE.md`](AGENT-INTERFACE.md)。
 
-## 一、它和模块 7（RAG）到底差在哪
+## 一、它和模块 3（RAG）到底差在哪
 
 这是整个模块存在的理由，一句话：
 
-| | 模块 7 · RAG | 模块 8 · Agent |
+| | 模块 3 · RAG | 模块 4 · Agent |
 | --- | --- | --- |
 | 谁决定流程 | **代码写死**：检索 → 拼 prompt → 生成 | **模型决定**：调哪个工具、调几次、什么顺序 |
 | 模型的职责 | 只负责"写" | 负责"决策 + 写" |
@@ -15,7 +15,7 @@
 | 能干什么 | 回答问题 | **干活**：出方案、查合规、调数据 |
 | 本质 | 让模型**知道得更多** | 让模型**能动手做事** |
 
-**RAG 是 Agent 的一个工具。** 模块 7 的检索能力，在模块 8 里就是 `search_knowledge` 这一个工具。
+**RAG 是 Agent 的一个工具。** 模块 3 的检索能力，在模块 4 里就是 `search_knowledge` 这一个工具。
 
 ## 二、Function Calling 的机制（实测确认，不是文档转述）
 
@@ -111,11 +111,11 @@
 
 | 工具 | 权限 | 干什么 | 底层 |
 | --- | --- | --- | --- |
-| `search_knowledge` | 读 | 检索知识库（**不生成答案**） | 模块 7 的检索器 |
-| `check_compliance` | 读 | 检查话术合规风险，返回违规词 + **可直接替换的说法** | 模块 5 |
+| `search_knowledge` | 读 | 检索知识库（**不生成答案**） | 模块 3 的检索器 |
+| `check_compliance` | 读 | 检查话术合规风险，返回违规词 + **可直接替换的说法** | 模块 6.2 |
 | `build_live_deck` | 读* | 生成直播大纲 + 逐字稿（只回结构，正文落盘到 `output/agent/`） | 模块 1 |
 | `list_mountains` | 读 | 列出山头 | 模块 2 |
-| `get_live_sessions` | 读 | 历史直播场次 | 模块 6 |
+| `get_live_sessions` | 读 | 历史直播场次 | 模块 6.1 |
 | `save_faq` | **写** | 把一条问答存进问答库 | `data/faq.json` |
 | `update_deck` | **写** | 改方案的标题 / 时长（**只允许这两个字段**） | `data/decks/*.json` |
 

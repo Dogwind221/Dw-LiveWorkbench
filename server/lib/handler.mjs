@@ -98,8 +98,12 @@ function sendJson(res, data, status = 200, extraHeaders = null) {
   res.end(body);
 }
 
-function sendText(res, text, status = 200, type = 'text/plain; charset=utf-8') {
-  res.writeHead(status, { 'content-type': type, 'content-length': Buffer.byteLength(text) });
+function sendText(res, text, status = 200, type = 'text/plain; charset=utf-8', extra = null) {
+  res.writeHead(status, {
+    'content-type': type,
+    'content-length': Buffer.byteLength(text),
+    ...(extra || {}),
+  });
   res.end(text);
 }
 
@@ -817,17 +821,53 @@ route('DELETE', '/api/sessions/:id', async (p) => ({ ok: removeSession(p.id) }))
 /* ------------------------------------------------------------------ *
  * 静态与产物
  * ------------------------------------------------------------------ */
-function serveStatic(res, urlPath) {
+
+/**
+ * 静态资源的缓存策略。
+ *
+ * 踩过的坑：原来只发 `content-type`，**没有任何缓存头**。
+ * 浏览器对这种响应会走"启发式缓存"——改完 `web/app.js` 刷新页面，
+ * 拿到的还是旧 JS，侧边栏顺序没变，看上去像"服务没改好"。
+ *
+ * 策略：
+ *   - HTML        → no-cache（每次都问服务器，拿到新的版本号）
+ *   - JS / CSS    → no-cache + ETag（内容没变就 304，几乎零成本）
+ *   - 其他（图片等）→ 短缓存 60s + ETag
+ *
+ * ETag 用 `mtime-size`，不用读文件内容，便宜且足够区分版本。
+ */
+function staticHeaders(file, ext) {
+  const st = fs.statSync(file);
+  const etag = `W/"${Math.floor(st.mtimeMs).toString(36)}-${st.size.toString(36)}"`;
+  const isCode = ext === '.js' || ext === '.css' || ext === '.mjs';
+  const isHtml = ext === '.html';
+  return {
+    etag,
+    'cache-control': isHtml || isCode ? 'no-cache, must-revalidate' : 'public, max-age=60',
+  };
+}
+
+function serveStatic(res, urlPath, req) {
   // 必须以相对路径 join，否则 path.resolve 会把 "/app.js" 当成磁盘根目录
   const rel = urlPath.replace(/^\/+/, '') || 'index.html';
   const file = safeJoin(WEB_DIR, rel);
   if (!file || !fs.existsSync(file) || fs.statSync(file).isDirectory()) {
     const idx = path.join(WEB_DIR, 'index.html');
-    if (fs.existsSync(idx)) return sendText(res, fs.readFileSync(idx, 'utf8'), 200, MIME['.html']);
+    if (fs.existsSync(idx)) {
+      const extra = staticHeaders(idx, '.html');
+      return sendText(res, fs.readFileSync(idx, 'utf8'), 200, MIME['.html'], extra);
+    }
     return sendText(res, 'Not Found', 404);
   }
   const ext = path.extname(file).toLowerCase();
-  res.writeHead(200, { 'content-type': MIME[ext] || 'application/octet-stream' });
+  const extra = staticHeaders(file, ext);
+  // 条件请求：浏览器带着上次的 ETag 来，内容没变直接 304，省带宽
+  const inm = req && req.headers && req.headers['if-none-match'];
+  if (inm && inm === extra.etag) {
+    res.writeHead(304, { etag: extra.etag, 'cache-control': extra['cache-control'] });
+    return res.end();
+  }
+  res.writeHead(200, { 'content-type': MIME[ext] || 'application/octet-stream', ...extra });
   fs.createReadStream(file).pipe(res);
 }
 
@@ -935,7 +975,7 @@ export function createWorkbenchHandler(options = {}) {
       }
 
       if (pathname.startsWith('/api/')) return sendJson(res, { error: 'NOT_FOUND', path: pathname }, 404);
-      return serveStatic(res, pathname);
+      return serveStatic(res, pathname, req);
     } catch (err) {
       console.error(`[workbench] ${req.method} ${pathname} 失败：`, err);
       if (!res.headersSent) sendJson(res, { error: 'INTERNAL', message: err.message }, 500);

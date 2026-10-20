@@ -55,33 +55,117 @@
 
   /* ---------------------------------------------------------------- 导航 */
   /**
-   * 侧栏模块清单。
+   * 侧栏导航树。
    *
-   * `num` 就是「从上到下第几个」——**必须和数组顺序一致**。
-   * 早期编号沿用了历史模块号，侧栏显示成 1、2、7、8、4…，很难指代"第几个模块"。
-   * 想调整顺序：改数组顺序，然后按位置重排 num。
+   * - `num`   = 从上到下第几个；分组内的子项用 6.1 / 8.2 这种子编号
+   * - `items` = 这一项是一个**可折叠分组**，点标题展开/收起
+   * - 数组顺序 = 显示顺序，改顺序只改这里
+   *
+   * 构建号用于肉眼确认"浏览器拿到的是不是新文件"：
+   * 从 `<script src="app.js?v=...">` 里读出来，显示在侧栏底部。
    */
-  const MODULES = [
+  const BUILD_ID = (() => {
+    try {
+      const tag = [...document.scripts].find((s) => /(^|\/)app\.js(\?|$)/.test(s.src));
+      const m = tag && tag.src.match(/[?&]v=([^&]+)/);
+      return m ? m[1] : 'dev';
+    } catch {
+      return 'dev';
+    }
+  })();
+
+  const NAV_TREE = [
     { id: 'deck', num: '1', name: 'PPT + 口播稿生成', sub: '选题 → 大纲 → 幻灯片 → 逐字稿 → 导出' },
     { id: 'kb', num: '2', name: '山头 / 茶品知识库', sub: '直播内容的底座，可自行完善' },
     { id: 'rag', num: '3', name: 'AI 知识库问答（RAG）', sub: '检索知识库后回答，每句都带出处' },
     { id: 'agent', num: '4', name: 'AI 助手（Agent 编排）', sub: '你说要什么，它自己决定调哪些工具' },
     { id: 'qa', num: '5', name: '提词器 + 弹幕问答', sub: '开着提词器播，边播边答' },
-    { id: 'compliance', num: '6', name: '合规违禁词检查', sub: '广告法与平台规则兜底' },
-    { id: 'review', num: '7', name: '复盘 + 切片建议', sub: '看完数据，知道下一场改什么' },
-    { id: 'intel', num: '8', name: '今日情报采集', sub: '抓取与整理素材，转成可直播的选题' },
-    { id: 'batch', num: '9', name: '批量生成方案', sub: '勾多个山头，一次出多份方案与口播稿' },
-    { id: 'variants', num: '10', name: 'A/B 方案对比', sub: '同一款茶几种讲法，看着指标选' },
+    {
+      group: 'g-review',
+      num: '6',
+      name: '复盘建议 · 合规检查',
+      sub: '直播前的红线核查，直播后的数据复盘',
+      items: [
+        { id: 'review', num: '6.1', name: '复盘 + 切片建议', sub: '看完数据，知道下一场改什么' },
+        { id: 'compliance', num: '6.2', name: '合规违禁词检查', sub: '广告法与平台规则兜底' },
+      ],
+    },
+    { id: 'intel', num: '7', name: '今日情报采集', sub: '抓取与整理素材，转成可直播的选题' },
+    {
+      group: 'g-bulk',
+      num: '8',
+      name: '批量生成及方案对比',
+      sub: '一次出多份候选，再挑最合适的那一份',
+      items: [
+        { id: 'batch', num: '8.1', name: '批量生成方案', sub: '勾多个山头，一次出多份方案与口播稿' },
+        { id: 'variants', num: '8.2', name: 'A/B 方案对比', sub: '同一款茶几种讲法，看着指标选' },
+      ],
+    },
   ];
 
-  function renderNav() {
-    $('#nav').innerHTML = MODULES.map(
-      (m) => `<button class="nav-item${state.module === m.id ? ' active' : ''}" data-nav="${m.id}">
+  /** 展平后的模块表：按 id 查标题/副标题 */
+  const MODULES = NAV_TREE.flatMap((n) => (n.items ? n.items : [n]));
+
+  /* 折叠状态：没设置过就默认全展开；用户点过之后记住选择 */
+  const NAV_OPEN_KEY = 'puer_nav_open';
+  function loadOpenGroups() {
+    try {
+      const raw = localStorage.getItem(NAV_OPEN_KEY);
+      if (raw === null) return null;
+      const arr = JSON.parse(raw);
+      return Array.isArray(arr) ? arr : null;
+    } catch {
+      return null;
+    }
+  }
+  let openGroups = loadOpenGroups();
+
+  function isGroupOpen(node) {
+    if (node.items.some((i) => i.id === state.module)) return true; // 当前模块在组内，强制展开
+    if (openGroups === null) return true; // 默认展开
+    return openGroups.includes(node.group);
+  }
+
+  function toggleGroup(id) {
+    if (openGroups === null) openGroups = NAV_TREE.filter((n) => n.items).map((n) => n.group);
+    if (openGroups.includes(id)) {
+      // 不要把当前所在的组收起来，否则用户会"找不到自己在哪"
+      const node = NAV_TREE.find((n) => n.group === id);
+      if (node && node.items.some((i) => i.id === state.module)) return;
+      openGroups = openGroups.filter((x) => x !== id);
+    } else {
+      openGroups = [...openGroups, id];
+    }
+    try {
+      localStorage.setItem(NAV_OPEN_KEY, JSON.stringify(openGroups));
+    } catch {
+      /* 隐私模式写不了就算了 */
+    }
+    renderNav();
+  }
+
+  function navItemHtml(m, isSub) {
+    return `<button class="nav-item${isSub ? ' sub' : ''}${state.module === m.id ? ' active' : ''}" data-nav="${m.id}">
         <span class="num">${m.num}</span><span>${esc(m.name)}</span>${
           m.id === 'deck' && state.deck ? '<span class="badge">已生成</span>' : ''
-        }</button>`
-    ).join('');
-    const mod = MODULES.find((m) => m.id === state.module);
+        }</button>`;
+  }
+
+  function renderNav() {
+    $('#nav').innerHTML = NAV_TREE.map((node) => {
+      if (!node.items) return navItemHtml(node, false);
+      const open = isGroupOpen(node);
+      const hasActive = node.items.some((i) => i.id === state.module);
+      return `<div class="nav-group${hasActive ? ' has-active' : ''}">
+        <button class="nav-item nav-head" data-group="${node.group}" aria-expanded="${open}">
+          <span class="num">${node.num}</span><span>${esc(node.name)}</span>
+          <span class="caret">${open ? '▾' : '▸'}</span>
+        </button>
+        <div class="nav-sub${open ? '' : ' collapsed'}">${node.items.map((i) => navItemHtml(i, true)).join('')}</div>
+      </div>`;
+    }).join('');
+
+    const mod = MODULES.find((m) => m.id === state.module) || MODULES[0];
     $('#pageTitle').textContent = mod.name;
     $('#pageSub').textContent = mod.sub;
   }
@@ -2967,6 +3051,12 @@
   async function boot() {
     bindPrompter();
     document.addEventListener('click', (e) => {
+      // 分组标题：展开 / 收起
+      const head = e.target.closest('[data-group]');
+      if (head) {
+        toggleGroup(head.dataset.group);
+        return;
+      }
       const nav = e.target.closest('[data-nav]');
       if (nav) goto(nav.dataset.nav);
     });
@@ -2983,6 +3073,8 @@
     }
 
     renderNav();
+    const stamp = $('#buildStamp');
+    if (stamp) stamp.textContent = `界面构建 ${BUILD_ID}`;
     await bindIdentity();
     await goto('intel');
   }

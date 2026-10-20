@@ -597,3 +597,45 @@ a.chip:hover { background: var(--primary); color: #fff; }
   .main { width: 100%; min-width: 0; }
   .topbar { position: static; }
 }
+
+/* --------------------------------------------------------------------------
+   侧栏折叠分组
+   子项比一级项轻一档：字号略小、编号变灰、左侧一条竖线表示从属关系。
+   手机端（≤760px）导航是横向滚动的单行，分组改为"平铺"——见文件末尾。
+   -------------------------------------------------------------------------- */
+.nav-group { margin-bottom: 3px; }
+.nav-item.nav-head { width: 100%; }
+.nav-item.nav-head .caret {
+  margin-left: auto;
+  font-size: 10px;
+  opacity: .6;
+  transition: opacity .15s;
+}
+.nav-item.nav-head:hover .caret { opacity: 1; }
+.nav-group.has-active > .nav-head { color: #fff; }
+.nav-sub {
+  margin: 2px 0 6px 20px;
+  padding-left: 8px;
+  border-left: 1px solid rgba(255, 255, 255, .12);
+}
+.nav-sub.collapsed { display: none; }
+.nav-item.sub { padding: 7px 10px; font-size: 13px; }
+.nav-item.sub .num {
+  width: 26px;
+  flex: 0 0 26px;
+  height: auto;
+  background: none;
+  font-size: 10.5px;
+  color: #7d928a;
+  justify-content: flex-start;
+}
+.nav-item.sub.active .num { color: rgba(255, 255, 255, .85); }
+.build-stamp { margin-top: 6px; font-size: 10.5px; color: #5f7269; letter-spacing: .2px; }
+
+@media (max-width: 760px) {
+  /* 手机上导航是一行横滑，没法折叠：分组头隐藏，子项直接平铺进这一行 */
+  .nav-group { display: contents; }
+  .nav-item.nav-head { display: none; }
+  .nav-sub, .nav-sub.collapsed { display: contents; }
+  .nav-item.sub { margin: 0; padding: 7px 11px; font-size: 12.5px; }
+}
