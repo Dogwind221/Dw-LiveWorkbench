@@ -36,6 +36,8 @@ node scripts/smoke.mjs                  # 六大基础模块
 
 ---
 
+**English summary**: [README.en.md](README.en.md)　｜　**License**: [MIT](LICENSE)　｜　**移植到其他行业**: [docs/PORTING.md](docs/PORTING.md)
+
 ## 一、怎么启动
 
 **方式 A：挂进 DSH GUI 左下角（推荐）**
