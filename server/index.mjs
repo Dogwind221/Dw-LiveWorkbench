@@ -152,7 +152,7 @@ server.listen(PORT, HOST, () => {
     console.log(`    用户名：${adminBootstrap.user.username}`);
     console.log(`    密  码：${adminBootstrap.password}`);
     console.log('');
-    console.log(`  登录地址：${url}/login`);
+    console.log(`  登录地址：${localUrl}/login`);
     console.log(`  账号已写入：${usersFile()}（密码用 scrypt 加盐哈希，明文不落盘）`);
     console.log('  忘了密码：node scripts/create-user.mjs --password admin');
   }
