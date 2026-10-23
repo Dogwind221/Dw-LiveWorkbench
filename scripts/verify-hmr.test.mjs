@@ -126,7 +126,7 @@ test('restoring the handler cannot pass the dependency case', async () => {
 test('dependency-only success is reported as incomplete', async () => {
   const result = await runScenario('dependency-only');
   assert.equal(result.code, 1, result.output);
-  assert.doesNotMatch(result.output, /两类重载都没观察到/);
+  assert.match(result.output, /验证未全部通过/);
 });
 
 test('cleanup preserves edits made while waiting', async () => {
@@ -138,5 +138,8 @@ test('cleanup preserves edits made while waiting', async () => {
 test('--keep leaves the requested evaluation probes in place', async () => {
   const result = await runScenario('success', { keep: true });
   assert.equal(result.code, 0, result.output);
+  assert.match(result.output, /清理：删除 \/\/ hmr-verify/);
+  assert.match(result.output, /紧随其后的两行/);
+  assert.match(result.output, /保留其他修改/);
   for (const source of Object.values(result.contents)) assert.match(source, /hmr-verify-evaluated/);
 });

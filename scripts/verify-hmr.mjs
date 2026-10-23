@@ -113,6 +113,10 @@ for (const c of CASES) {
     results.push({ ...c, hit: false });
   } finally {
     restore();
+    if (KEEP && readFileSync(c.file, 'utf8').includes(probe)) {
+      console.log(`  --keep：求值探针保留在 ${c.file}`);
+      console.log(`  清理：删除 // hmr-verify ${token} 及紧随其后的两行（import 和日志写入）；保留其他修改。`);
+    }
     activeRestore = () => {};
   }
 }
