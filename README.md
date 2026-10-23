@@ -379,12 +379,60 @@ DSH 的 client-modules 契约是：包的 `package.json` 声明 `dsh.client.plat
       name: 'file:///F:/dsh/直播工作台/plugin/dsh-live-workbench/dist/plugin.js'
 ```
 
-- `cordis.patch.yml` 由 HMR 监视，**改完自动热重载，不需要重启 DSH**
 - 客户端的左下角入口需要**刷新一次网页**才出现
 - 卸载 = 删掉这几行（或改成 `disabled: true`），再刷新页面
 
 用干净的 `file://` URL，**不要加 `?v=2` 之类的查询串**：带查询串会让包名解析异常，
 同一个插件被加载两次并报 duplicate route（`web` profile 里的 media-studio 就是这么坏的）。
+
+### 让 HMR 监听工作台仓库（否则改后端不生效）
+
+默认 `hmr.config.root` 是 `[]`：**配置文件被监听，源码模块监听是关闭的**，而 profile
+重组只认 profile 目录与 linked-package 目标里的文件。本插件在 `F:` 盘别处，不会因为
+patch 引用了它就进入 watch root。
+
+所以在 profile 补丁里再加一条（`desktop` 与 `web` 都已写入）：
+
+```yaml
+- id: hmr
+  disabled: false
+  config:
+    base: 'file:///F:/dsh/直播工作台/'
+    root:
+      - 'plugin/dsh-live-workbench'
+      - 'server'
+```
+
+- `base` **必须带结尾斜杠**，它只是**相对路径的锚点**
+- **`root` 才决定监听什么**——只写 `base` 而不写 `root` 时，源码监听仍然是关闭的
+  （base bundle 给的默认 `root` 是 `[]`），这一点很容易踩
+- `root` 里写相对路径（相对 `base`）：`plugin/dsh-live-workbench` 覆盖宿主入口与客户端产物，
+  `server` 覆盖 handler 及其所有静态 import 的兄弟模块
+- 插件注册 URL 保持稳定（不要带查询串）
+- 这套配置下**源码编辑本身就是重载触发**，不要再靠碰 `cordis.patch.yml`
+
+**怎么验证真的生效**（`scripts/verify-hmr.mjs` 会把两种重载分开测）：
+
+```powershell
+node scripts/verify-hmr.mjs
+```
+
+```
+--- 用例：入口 handler（server/lib/handler.mjs） ---
+  ✓ 观察到重载（日志 198 → 204 行）
+--- 用例：依赖 paths.mjs（handler 静态 import 的兄弟） ---
+  ✓ 观察到重载（日志 204 → 210 行）
+✓ 源码监听已生效：入口与依赖都能触发重载。
+```
+
+> 两类都要绿才算数：**只触发入口**等于依赖模块还是旧的——那正是早期
+> `?v=timestamp` workaround 的假重载。
+
+> 依据：`deepseek-ai/deepseek-harness` Discussion #10774 里社区开发者 Caldera 的两次回复
+> （commit `687f282` 的 `hmr.config.root` / `profileRoots()`；「`base` 锚定相对路径、
+> `root` 选择监听范围」；以及 Node 22.23.4 / 26.12.1 上对「改被 import 文件的 URL 不会改它
+> 静态 import 的 URL」的实测）。上述 `root` 收窄方案与「入口/依赖两类重载都通过」是在
+> 打包版 Desktop 上实测得到的。
 
 ### 怎么确认插件真的加载了
 
@@ -394,7 +442,7 @@ DSH 的 client-modules 契约是：包的 `package.json` 声明 `dsh.client.plat
 也可以直接探路由：
 
 ```powershell
-Invoke-WebRequest http://127.0.0.1:19387/live-workbench/api/health -UseBasicParsing
+Invoke-WebRequest http://127.0.0.1:<端口>/live-workbench/api/health -UseBasicParsing
 ```
 
 ### 改了代码怎么生效
@@ -405,14 +453,19 @@ Invoke-WebRequest http://127.0.0.1:19387/live-workbench/api/health -UseBasicPars
 | --- | --- | --- |
 | `pipelines/build_pptx.py`（PPT 版式） | **立刻生效** | 立刻生效 |
 | `web/*`（前端、预览） | 刷新网页即可 | 刷新网页即可 |
-| `client/client.js`（左下角入口） | 碰一下 `cordis.patch.yml` + 刷新网页 | 不适用 |
-| `server/**`（后端引擎） | **必须重启 DSH** | 重启服务即可 |
+| `client/client.js`（左下角入口） | 刷新网页（HMR 替换客户端模块） | 不适用 |
+| `server/**`（后端引擎） | **配好 `hmr`（base + root）后自动重载**（见上一节） | 重启服务即可 |
 
-**为什么后端必须重启**：Node 的 ESM 模块缓存按解析后的 URL 记账。
-触碰 `cordis.patch.yml` 会触发 HMR 重新调用插件的 `apply()`，
-但 `apply()` 里 `import` 的那些 `server/` 模块命中缓存、不会重新求值 ——
-所以只重新加载最外层是没用的（`dist/plugin.js` 里确实用了带 query 的动态 import
-来穿透缓存，但它下面的静态导入仍然按原 URL 复用）。
+**为什么之前后端必须重启**：Node 的 ESM 缓存按解析后的 URL 记账。早期实现用
+「动态 import + `?v=timestamp`」去穿透缓存，但这只刷新了被 import 的那一个文件：
+`handler.mjs?v=2` 会重新求值 `handler.mjs`，而它静态 import 的十几个
+`server/lib/*.mjs` 兄弟仍然读旧实例 —— 对本项目这种多文件依赖，等于没重载。
+
+**现在的做法**：插件改成**静态 import** `server/lib/handler.mjs`，让 HMR 顺着静态
+依赖链替换；同时在 profile 里配 `hmr` 的 `base` + `root`，把仓库纳入监听范围
+（只配 `base` 不够，`root` 才决定监听什么）。
+静态 import 的代价是 handler 求值失败会让插件加载直接报错（而不是被 catch 住），
+这是刻意的「失败要响」。
 
 PPT 版式之所以例外，是因为渲染器是 **python 子进程**：每次导出都重新读
 `build_pptx.py`，不走 Node 的模块缓存。

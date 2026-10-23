@@ -14,16 +14,29 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 /**
- * 工作台处理器用**动态 import + 缓存穿透**加载，而不是静态 import。
+ * 静态 import —— 这是为了让 HMR 能顺着依赖链替换工作台代码。
  *
- * 原因：Node 的 ESM 模块缓存按解析后的 URL 记账。触碰 cordis.patch.yml 触发 HMR 时，
- * Cordis 会重新调用 apply()，但静态 import 的 `server/` 代码命中缓存、不会重新求值 ——
- * 于是「改完后端碰一下补丁就生效」是假的，GUI 里跑的还是旧引擎。
- * 带一个变化的 query 就能拿到全新模块实例，重载才是真的重载。
+ * 历史（2026-10-23 修正）：
+ * 早期这里用的是「动态 import + `?v=timestamp` 缓存穿透」，理由是 Node 的
+ * ESM 缓存按 URL 记账、碰补丁重跑 apply() 时静态 import 不会重新求值。
  *
- * 代价：每次重载多一份模块实例（忽略不计）。
+ * 但这条路有两个天花板，见 deepseek-ai/deepseek-harness Discussion #10774
+ * （维护者 Caldera 回复 + Node 22.23.4 / 26.12.1 实测）：
+ *   1. 改被 import 文件的 URL **不会**改它静态 import 的 URL——
+ *      `handler.mjs?v=2` 会重新求值 handler，但 handler import 的十几个
+ *      server/lib/*.mjs 兄弟仍读旧实例。工作台恰恰是多文件依赖，所以
+ *      「带 query 就算真重载」是假的。
+ *   2. DSH 的模块替换路径**沿静态 import 链接走**；只有静态 import 才给
+ *      HMR 一条回到插件的依赖路径。
+ *
+ * 因此：改为静态 import，并配合 profile 里的 `hmr` 条目
+ * （`config.base: 'file:///F:/dsh/直播工作台/'`，见 ~/.dsh/profiles/<profile>/cordis.patch.yml）
+ * 让源码编辑本身成为重载触发，而不是碰补丁文件。
+ *
+ * 代价：handler 模块求值失败会直接让插件加载失败（而不是被 catch 住）。
+ * 这是刻意的「失败要响」——静默失败比报错更难查。
  */
-const HANDLER_URL = new URL('../../../server/lib/handler.mjs', import.meta.url).href;
+import { createWorkbenchHandler } from '../../../server/lib/handler.mjs';
 
 /** Cordis 插件名（Loader 行标识，不是客户端包名）。 */
 export const name = 'live-workbench';
@@ -61,27 +74,23 @@ export function apply(ctx, config) {
   const basePath = (config && config.basePath) || ROUTE_PATH;
 
   ctx.effect(() => {
-    let disposed = false;
     let disposeRoute = () => {};
 
-    // 带 query 的动态 import：每次重载都拿到全新模块实例（见 HANDLER_URL 的说明）
-    import(`${HANDLER_URL}?v=${Date.now()}`)
-      .then(({ createWorkbenchHandler }) => {
-        if (disposed) return; // 加载期间被卸载：别把路由留给下一个实例
-        disposeRoute = ctx.webServer.register({
-          kind: 'prefix',
-          path: basePath,
-          handler: createWorkbenchHandler({ basePath }),
-        });
-        breadcrumb(`activated basePath=${basePath}`);
-      })
-      .catch((error) => {
-        breadcrumb(`activate failed: ${error && error.message}`);
-        console.error('[live-workbench] 工作台处理器加载失败：', error);
+    // 处理器已是静态 import：这里直接构造，注册失败只影响本次挂载，
+    // 但模块加载失败会让插件整体报错（见文件顶部说明）。
+    try {
+      disposeRoute = ctx.webServer.register({
+        kind: 'prefix',
+        path: basePath,
+        handler: createWorkbenchHandler({ basePath }),
       });
+      breadcrumb(`activated basePath=${basePath}`);
+    } catch (error) {
+      breadcrumb(`activate failed: ${error && error.message}`);
+      console.error('[live-workbench] 工作台路由注册失败：', error);
+    }
 
     return () => {
-      disposed = true;
       breadcrumb(`disposed basePath=${basePath}`);
       disposeRoute();
     };
