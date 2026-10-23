@@ -11,6 +11,7 @@
     "smoke": "node scripts/smoke.mjs",
     "smoke:api": "node scripts/api-smoke.mjs",
     "smoke:mount": "node scripts/mount-smoke.mjs",
+    "smoke:request-url": "node scripts/request-url-smoke.mjs",
     "smoke:plugin": "node scripts/plugin-smoke.mjs",
     "smoke:all": "node scripts/smoke.mjs && node scripts/mount-smoke.mjs && node scripts/plugin-smoke.mjs",
     "smoke:rag": "node scripts/rag-smoke.mjs",
