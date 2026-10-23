@@ -20,6 +20,7 @@
     "smoke:rbac": "node scripts/rbac-smoke.mjs",
     "smoke:quota": "node scripts/quota-smoke.mjs",
     "smoke:auth-ui": "node scripts/auth-ui-smoke.mjs",
+    "smoke:startup": "node scripts/startup-smoke.mjs",
     "smoke:batch": "node scripts/batch-variant-smoke.mjs",
     "check:docs": "node scripts/docs-consistency.mjs",
     "probe:rag": "node scripts/rag-probe.mjs",
