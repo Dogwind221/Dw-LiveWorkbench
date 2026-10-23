@@ -897,7 +897,14 @@ export function createWorkbenchHandler(options = {}) {
   const basePath = (options.basePath || '').replace(/\/+$/, '');
 
   return async function handle(req, res) {
-    let pathname = decodeURIComponent(new URL(req.url, `http://${req.headers.host || 'localhost'}`).pathname);
+    let url;
+    let pathname;
+    try {
+      url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+      pathname = decodeURIComponent(url.pathname);
+    } catch {
+      return sendJson(res, { error: 'BAD_URL', message: 'Invalid request URL' }, 400);
+    }
 
     if (basePath) {
       if (pathname === basePath) {
@@ -951,7 +958,7 @@ export function createWorkbenchHandler(options = {}) {
         const params = {};
         r.keys.forEach((k, i) => (params[k] = m[i + 1]));
         const body = req.method === 'GET' || req.method === 'DELETE' ? {} : await readBody(req);
-        const data = await r.handler(params, body, new URL(req.url, `http://${req.headers.host || 'localhost'}`).searchParams, req);
+        const data = await r.handler(params, body, url.searchParams, req);
         // 约定：handler 返回的对象若带 status，就是 HTTP 状态码；
         // 带 `__headers` 就是额外的响应头（登录/登出要用它带 Set-Cookie）。
         //

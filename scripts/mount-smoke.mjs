@@ -34,7 +34,7 @@ try {
   const page = await probe(`${BASE}/`);
   ok(page.status === 200 && page.type.includes('text/html'), '页面可访问');
   ok(page.text.includes('直播工作台'), '页面内容正确');
-  ok(/href="styles\.css"/.test(page.text), '页面里的资源是相对路径（挂子路径的前提）');
+  ok(/href="styles\.css(?:[?#][^"]*)?"/.test(page.text), '页面里的资源是相对路径（挂子路径的前提）');
 
   for (const [p, type] of [['app.js', 'javascript'], ['slides.js', 'javascript'], ['styles.css', 'text/css']]) {
     const r = await probe(`${BASE}/${p}`);
