@@ -54,7 +54,9 @@ const DIRS = [
 /** 文件：要带走的。 */
 const FILES = [
   'package.json',
+  'LICENSE',
   'README.md',
+  'README.en.md',
   'README-rag.md',
   'README-agent.md',
   'README-multitenant.md',
