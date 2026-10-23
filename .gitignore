@@ -48,11 +48,6 @@ desktop.ini
 # 测试临时目录（PR #1 引入，中断会残留）
 .startup-smoke-*
 
-# 个人/申请材料：永不入库（简历、面试稿、投递记录）
+# Private local materials (kept out of the repository)
 /个人资料/
-/个人资料*
-*简历*
-*求职*
-*面试*
-interview-brief.md
-spoken-scripts.md
+/.private/
