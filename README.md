@@ -419,14 +419,16 @@ node scripts/verify-hmr.mjs
 
 ```
 --- 用例：入口 handler（server/lib/handler.mjs） ---
-  ✓ 观察到重载（日志 198 → 204 行）
+  ✓ 本模块已重新求值，随后观察到激活
 --- 用例：依赖 paths.mjs（handler 静态 import 的兄弟） ---
-  ✓ 观察到重载（日志 204 → 210 行）
-✓ 源码监听已生效：入口与依赖都能触发重载。
+  ✓ 本模块已重新求值，随后观察到激活
+✓ 两个采样模块均已重新求值，随后观察到路由激活。
 ```
 
-> 两类都要绿才算数：**只触发入口**等于依赖模块还是旧的——那正是早期
-> `?v=timestamp` workaround 的假重载。
+> 脚本临时加入独立的模块求值探针，结束时移除；`--keep` 可保留探针供排查。
+> 每个用例必须先记录自己的求值标记，再观察到 `activated`。仅增加日志行数、
+> `activate failed` 或上一个用例恢复文件引发的重载，都不足以通过。
+> 结果只覆盖这两个采样模块，不保证其他文件、所有 profile 或浏览器客户端已刷新。
 
 > 依据：`deepseek-ai/deepseek-harness` Discussion #10774 里社区开发者 Caldera 的两次回复
 > （commit `687f282` 的 `hmr.config.root` / `profileRoots()`；「`base` 锚定相对路径、
