@@ -22,6 +22,7 @@
     "smoke:quota": "node scripts/quota-smoke.mjs",
     "smoke:auth-ui": "node scripts/auth-ui-smoke.mjs",
     "smoke:startup": "node scripts/startup-smoke.mjs",
+    "smoke:hmr-verifier": "node --test scripts/verify-hmr.test.mjs",
     "smoke:batch": "node scripts/batch-variant-smoke.mjs",
     "check:docs": "node scripts/docs-consistency.mjs",
     "probe:rag": "node scripts/rag-probe.mjs",
