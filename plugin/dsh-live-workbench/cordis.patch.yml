@@ -1,0 +1,5 @@
+# dsh bundle patch: inserts the Pu'er live-streaming workbench (deck generation,
+# knowledge base, Q&A, compliance check, retro) into a profile's layer stack.
+- insert:
+    - id: live-workbench
+      name: 'dsh-live-workbench'

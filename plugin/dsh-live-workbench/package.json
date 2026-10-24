@@ -15,11 +15,19 @@
     "./package.json": "./package.json"
   },
   "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
     "client": {
       "inject": [
         "@deepseek-ai/dsh-client-ui-slots"
       ],
       "platform": "web"
     }
-  }
+  },
+  "files": [
+    "dist",
+    "client",
+    "cordis.patch.yml"
+  ]
 }
