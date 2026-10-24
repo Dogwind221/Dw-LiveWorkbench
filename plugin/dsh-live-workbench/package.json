@@ -1,6 +1,7 @@
 {
   "name": "dsh-live-workbench",
   "version": "0.1.0",
+  "private": true,
   "type": "module",
   "description": "DSH plugin: a live-streaming workbench mounted at /live-workbench — deck generation, knowledge base, Q&A, compliance check and retro. 普洱茶直播工作台插件。",
   "main": "dist/plugin.js",
@@ -12,6 +13,24 @@
       "default": "./client/client.js"
     },
     "./package.json": "./package.json"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dogwind221/Dw-LiveWorkbench.git",
+    "directory": "plugin/dsh-live-workbench"
+  },
+  "homepage": "https://github.com/Dogwind221/Dw-LiveWorkbench/tree/main/plugin/dsh-live-workbench",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "livestream",
+    "workbench",
+    "agent"
+  ],
+  "engines": {
+    "node": ">=20"
   },
   "dsh": {
     "bundle": {
@@ -29,26 +48,5 @@
     "client",
     "cordis.patch.yml",
     "LICENSE"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Dogwind221/Dw-LiveWorkbench.git",
-    "directory": "plugin/dsh-live-workbench"
-  },
-  "homepage": "https://github.com/Dogwind221/Dw-LiveWorkbench/tree/main/plugin/dsh-live-workbench",
-  "license": "MIT",
-  "keywords": [
-    "dsh",
-    "dsh-plugin",
-    "deepseek-harness",
-    "livestream",
-    "workbench",
-    "agent"
-  ],
-  "engines": {
-    "node": ">=20"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+  ]
 }
