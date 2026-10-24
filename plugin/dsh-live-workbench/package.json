@@ -1,9 +1,8 @@
 {
   "name": "dsh-live-workbench",
   "version": "0.1.0",
-  "private": true,
   "type": "module",
-  "description": "普洱茶直播工作台 —— DSH 插件：宿主半边把工作台挂到 /live-workbench，客户端半边在左下角加一个入口",
+  "description": "DSH plugin: a live-streaming workbench mounted at /live-workbench — deck generation, knowledge base, Q&A, compliance check and retro. 普洱茶直播工作台插件。",
   "main": "dist/plugin.js",
   "exports": {
     ".": {
@@ -28,6 +27,28 @@
   "files": [
     "dist",
     "client",
-    "cordis.patch.yml"
-  ]
+    "cordis.patch.yml",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dogwind221/Dw-LiveWorkbench.git",
+    "directory": "plugin/dsh-live-workbench"
+  },
+  "homepage": "https://github.com/Dogwind221/Dw-LiveWorkbench/tree/main/plugin/dsh-live-workbench",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "livestream",
+    "workbench",
+    "agent"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
